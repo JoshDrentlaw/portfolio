@@ -2,20 +2,10 @@
   "name": "portfolio",
   "version": "1.0.0",
   "description": "Josh Drentlaw Web Development",
-  "main": "app.js",
-  "babel": {
-    "plugins": [
-      "react-hot-loader/babel"
-    ],
-    "presets": [
-      "@babel/preset-env",
-      "@babel/preset-react"
-    ]
-  },
   "scripts": {
     "build": "webpack",
-    "start": "webpack-dev-server",
-    "netlify": "netlify dev -c \"npm run start\" -p 5555 --live",
+    "start": "gatsby develop",
+    "netlify": "netlify --live",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -39,30 +29,32 @@
   },
   "homepage": "https://github.com/JoshDrentlaw/portfolio#readme",
   "dependencies": {
-    "@hot-loader/react-dom": "^16.8.6",
-    "file-loader": "^4.0.0",
-    "normalize.css": "^8.0.1",
+    "autoprefixer": "^9.5.1",
+    "babel-plugin-styled-components": "^1.10.0",
+    "gatsby": "^2.5.5",
+    "gatsby-image": "^2.1.1",
+    "gatsby-plugin-manifest": "^2.1.1",
+    "gatsby-plugin-netlify": "^2.0.17",
+    "gatsby-plugin-offline": "^2.1.1",
+    "gatsby-plugin-postcss": "^2.0.7",
+    "gatsby-plugin-react-helmet": "^3.0.12",
+    "gatsby-plugin-react-svg": "^2.1.1",
+    "gatsby-plugin-sharp": "^2.0.37",
+    "gatsby-plugin-styled-components": "^3.0.7",
+    "gatsby-plugin-web-font-loader": "^1.0.4",
+    "gatsby-source-filesystem": "^2.0.36",
+    "gatsby-transformer-sharp": "^2.1.19",
+    "prop-types": "^15.7.2",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.1",
-    "react-router-config": "^5.0.1",
-    "react-router-dom": "^5.0.1",
-    "styled-components": "^4.3.1"
+    "react-html-parser": "^2.0.2",
+    "styled-components": "^4.2.0",
+    "tailwind.macro": "^0.5.10"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.6",
-    "css-loader": "^2.1.1",
-    "html-webpack-plugin": "^3.2.0",
-    "image-webpack-loader": "^5.0.0",
-    "react-hot-loader": "^4.11.0",
-    "react-svg-loader": "^3.0.3",
-    "style-loader": "^0.23.1",
-    "url-loader": "^2.0.0",
-    "webpack": "^4.34.0",
-    "webpack-cli": "^3.3.3",
-    "webpack-dev-server": "^3.7.1"
+    "babel-plugin-tailwind-components": "^0.5.10",
+    "prettier": "^1.17.1",
+    "tailwindcss": "^1.0.1"
   }
 }

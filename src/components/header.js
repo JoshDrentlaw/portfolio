@@ -1,5 +1,5 @@
 import React from 'react'
-import { NavLink } from 'react-router-dom'
+import { Link } from 'gatsby'
 
 import styled from 'styled-components'
 
@@ -31,7 +31,7 @@ const Wrapper = styled.div`
     }
 `
 
-const A = styled(NavLink)`
+const A = styled(Link)`
     padding: 0.5em 1em;
     text-decoration: none;
 

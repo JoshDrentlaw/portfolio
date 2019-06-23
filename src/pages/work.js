@@ -1,9 +1,9 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import SEO from "../components/seo"
 
 import styled from 'styled-components'
 
-import { Container } from '../components/layout'
+import Layout, { Container } from '../components/layout'
 
 import PennyHouse from '../images/pennyhouseweddings.png'
 import EarthFarm from '../images/socalearthfarm.png'
@@ -29,13 +29,13 @@ const WorkItem = (props) => (
     <>
         <div className="large">
             <Img>
-                <a href={props.url} target="_blank">
+                <a href={props.url} target="_blank" rel="noopener noreferrer">
                     <img src={props.src} alt={props.alt} />
                 </a>
             </Img>
         </div>
         <div className="small">
-            <p>Website for <a href={props.url} target="_blank">{props.name}</a></p>
+            <p>Website for <a href={props.url} target="_blank" rel="noopener noreferrer">{props.name}</a></p>
             <p>{props.gatsby}</p>
             <p>{props.netlify}</p>
         </div>
@@ -44,11 +44,8 @@ const WorkItem = (props) => (
 
 const Work = () => {
     return (
-        <>
-            <Helmet>
-                <title>JDWD | Work</title>
-                <meta name="description" content="Josh Drentlaw's web development work using the amazingly powerful GatsbyJS and Netlify platforms." />
-            </Helmet>
+        <Layout>
+            <SEO title="JDWD | Work" description="Josh Drentlaw's web development work using the amazingly powerful GatsbyJS and Netlify platforms." />
             <Container>
                 <WorkItem
                     alt="Image of the Penny House Weddings website."
@@ -79,7 +76,7 @@ const Work = () => {
                     url="https://wallyracing.netlify.com"
                 />
             </Container>
-        </>
+        </Layout>
     )
 }
 

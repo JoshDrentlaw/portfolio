@@ -1,7 +1,7 @@
 import React from 'react'
-import { Helmet } from 'react-helmet'
+import SEO from "../components/seo"
 
-import { Container } from '../components/layout'
+import Layout, { Container } from '../components/layout'
 
 import styled from 'styled-components'
 
@@ -146,11 +146,8 @@ const Contact = () => {
     ]
     
     return (
-        <>
-            <Helmet>
-                <title>JDWD | Hire</title>
-                <meta name="description" content="Please drop a line if you would like to contact Josh Drentlaw about a job. He's always looking for work!" />
-            </Helmet>
+        <Layout>
+            <SEO title="JDWD | Hire" description="Please drop a line if you would like to contact Josh Drentlaw about a job. He's always looking for work!" />
             <Container style={{ height: `70vh`, marginTop: `0`, paddingTop: `0` }}>
                 <h1>If you'd like to hire me...</h1>
                 <Form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
@@ -167,7 +164,7 @@ const Contact = () => {
                     <button className="button" type="submit">Submit</button>
                 </Form>
             </Container>
-        </>
+        </Layout>
     )
 }
 

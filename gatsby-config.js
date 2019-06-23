@@ -18,6 +18,12 @@ module.exports = {
         path: `${__dirname}/src/assets/`,
       },
     },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/images/`,
+      },
+    },
     'gatsby-plugin-postcss',
     {
       resolve: `gatsby-plugin-manifest`,

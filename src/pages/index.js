@@ -1,13 +1,13 @@
-import React, { useEffect } from 'react'
-import { Helmet } from 'react-helmet'
+import React from 'react'
+import SEO from "../components/seo"
 
 import styled from 'styled-components'
 
-import { Container } from '../components/layout'
+import Layout, { Container } from '../components/layout'
 
-import Gatsby from '../images/gatsbyjs-icon.svg'
-import Netlify from '../images/netlify-icon.svg'
-import Heart from '../images/heart.svg'
+import Gatsby from '../images/gatsbyjs-icon-inline.svg'
+import Netlify from '../images/netlify-icon-inline.svg'
+import Heart from '../images/heart-inline.svg'
 
 const Heading = styled.h1`
     align-self: start;
@@ -62,11 +62,8 @@ const Logos = styled.div`
 
 const Index = () => {
     return (
-        <>
-            <Helmet>
-                <title>JDWD | Home</title>
-                <meta name="description" content="Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify." />
-            </Helmet>
+        <Layout>
+            <SEO title="Home | Josh Drentlaw Web Development" description="Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify." />
             <Container style={{
                 height: `calc((100vh - 4em) - 56px)`,
                 margin: `0.75em 0`,
@@ -76,18 +73,18 @@ const Index = () => {
                     Build powerful static sites with GatsbyJS and Netlify.
                 </Heading>
                 <Logos>
-                    <Gatsby />
+                    <img src={Gatsby} alt="The Gatsby logo" />
                     <span>&#43;</span>
-                    <Netlify />
+                    <img src={Netlify} alt="The Netlify logo" />
                     <span>&#61;</span>
-                    <Heart />
+                    <img src={Heart} alt="A heart" />
                 </Logos>
             </Container>
             <SubHeading style={{ marginTop: '4em' }}>My name is Josh Drentlaw! I'm a front-end web developer in Riverside, CA. If your small to medium business or project needs a static site, look nowhere else!</SubHeading>
             <Container>
                 <div className="small">
                     <H3>What is GatsbyJS?</H3>
-                    <Gatsby />
+                    <img src={Gatsby} alt="The Gatsby logo" />
                 </div>
                 <div className="large">
                     <p>GatsbyJS is a web framework that makes creating static websites extremely simple.</p>
@@ -99,7 +96,7 @@ const Index = () => {
             <Container>
                 <div className="small">
                     <H3>What is Netlify?</H3>
-                    <Netlify />
+                    <img src={Netlify} alt="The Netlify logo" />
                 </div>
                 <div className="large">
                     <p>Netlify is a (mostly) free web hosting platform.</p>
@@ -109,7 +106,7 @@ const Index = () => {
                 </div>
             </Container>
             <SubHeading>Together we will create the website of your dreams!</SubHeading>
-        </>
+        </Layout>
     )
 }
 

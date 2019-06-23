@@ -1,13 +1,10 @@
 import React from 'react'
-import { BrowserRouter as Router, Route } from 'react-router-dom'
+import PropTypes from "prop-types"
 
+import '../index.css'
 import styled from 'styled-components'
 
-import Index from '../pages/index'
-import About from '../pages/about'
-import Work from '../pages/work'
-import Contact from '../pages/contact'
-import Header from './header'
+import Header from "./header"
 import Footer from './footer'
 
 const Body = styled.div`
@@ -79,21 +76,18 @@ export const Container = styled.section`
     }
 `
 
-export default function Layout() {
+function Layout({ children }) {
     return (
-        <Router>
-            <Body>
-                <Route component={Header} />
-
-                <Main>
-                    <Route path="/" exact component={Index} />
-                    <Route path="/about/" component={About} />
-                    <Route path="/work/" component={Work} />
-                    <Route path="/contact/" component={Contact} />
-                </Main>
-
-                <Route component={Footer} />
-            </Body>
-        </Router>
+        <Body>
+            <Header />
+            <Main>{children}</Main>
+            <Footer />
+        </Body>
     )
 }
+
+Layout.propTypes = {
+    children: PropTypes.node.isRequired,
+}
+
+export default Layout
