@@ -13,13 +13,14 @@ const Heading = styled.h1`
     align-self: start;
     display: inline-flex;
     flex-direction: column;
-    font-size: 3.4em;
+    font-size: calc(45px + (70 - 45) * (100vw - 300px) / (880 - 300));
     height: calc(100% - 2em);
     justify-content: start;
+    line-height: calc(1em + (1.2 - 1) * (100vw - 300px) / (880 - 300));
     margin: 0;
     width: 100%;
 
-    @media(min-width: 768px) {
+    /* @media(min-width: 768px) {
         font-size: 4.1em;
     }
 
@@ -29,7 +30,7 @@ const Heading = styled.h1`
 
     @media(min-width: 1680px) {
         font-size: 5.5em;
-    }
+    } */
 `
 
 const SubHeading = styled.p`
@@ -44,9 +45,8 @@ const H3 = styled.h3`
 const Logos = styled.div`
     align-items: center;
     display: flex;
-    height: calc(100% - 2em);
+    height: auto;
     justify-content: space-around;
-    padding: 1em;
     width: 100%;
 
     span {
@@ -54,9 +54,19 @@ const Logos = styled.div`
         margin: 0.4em;
     }
 
+    svg {
+        width: 200px;
+        height: auto;
+    }
+
     @media(min-width: 1024px) {
         flex-direction: column;
+        height: calc(100% - 2em);
         width: auto;
+
+        svg {
+            height: 200px;
+        }
     }
 `
 
