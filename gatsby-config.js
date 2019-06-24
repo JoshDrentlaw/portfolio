@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Boilerplate`,
-    description: `My personal Gatsby boilerplate.`,
+    title: `Josh Drentlaw Web Development`,
+    description: `Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify.`,
     author: `Josh Drentlaw`,
   },
   plugins: [
@@ -13,7 +13,8 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/blog/`,
+        name: 'blog',
+        path: `${__dirname}/src/pages/blog/`,
       },
     },
     {
@@ -35,8 +36,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `penny-house-weddings`,
-        short_name: `starter`,
+        name: `portfolio`,
+        short_name: `portfolio`,
         start_url: `/`,
         background_color: `#000000`,
         theme_color: `#000000`,

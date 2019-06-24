@@ -5,9 +5,9 @@ import styled from 'styled-components'
 
 import Layout, { Container } from '../components/layout'
 
-import Gatsby from '../images/gatsbyjs-icon.inline.svg'
-import Netlify from '../images/netlify-icon.inline.svg'
-import Heart from '../images/heart.inline.svg'
+import Gatsby from '../assets/svg/gatsbyjs-icon.inline.svg'
+import Netlify from '../assets/svg/netlify-icon.inline.svg'
+import Heart from '../assets/svg/heart.inline.svg'
 
 const Heading = styled.h1`
     align-self: start;
