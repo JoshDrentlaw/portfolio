@@ -16,7 +16,7 @@ const Heading = styled.h1`
     font-size: calc(45px + (70 - 45) * (100vw - 300px) / (880 - 300));
     height: calc(100% - 2em);
     justify-content: start;
-    line-height: calc(1em + (1.2 - 1) * (100vw - 300px) / (880 - 300));
+    line-height: calc(1em + (1.2 - 1.1) * (100vw - 300px) / (880 - 300));
     margin: 0;
     width: 100%;
 
@@ -94,7 +94,7 @@ const Index = () => {
             <Container>
                 <div className="small">
                     <H3>What is GatsbyJS?</H3>
-                    <Gatsby />
+                    <Gatsby style={{ height: `180px`}} />
                 </div>
                 <div className="large">
                     <p>GatsbyJS is a web framework that makes creating static websites extremely simple.</p>
@@ -106,7 +106,7 @@ const Index = () => {
             <Container>
                 <div className="small">
                     <H3>What is Netlify?</H3>
-                    <Netlify />
+                    <Netlify style={{ height: `180px`}} />
                 </div>
                 <div className="large">
                     <p>Netlify is a (mostly) free web hosting platform.</p>

@@ -1,30 +1,43 @@
 import React from 'react'
 import SEO from "../components/seo"
+import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import Layout, { Container } from '../components/layout'
 
-import Me from '../images/me.png'
-
 import styled from 'styled-components'
 
-const Pic = styled.img`
+const Pic = styled(Img)`
     border-radius: 10px;
-    height: 200px;
-    width: 150px;
+    min-height: 200px;
+    min-width: 150px;
 `
 
 const About = () => {
+    const data = useStaticQuery(graphql`
+        {
+            file(relativePath: {eq: "me.png"}) {
+                childImageSharp {
+                    fixed(width: 150, height: 200) {
+                        ...GatsbyImageSharpFixed
+                    }
+                }
+            }
+        }
+    `)
+
     return (
         <Layout>
-            <SEO title="JDWD | About" description="Get to know Josh Drentlaw a little bit. He does more than just code websites." />
+            <SEO title="About | Josh Drentlaw Web Development" description="Get to know Josh Drentlaw a little bit. He does more than just code websites." />
             <Container
                 style={{
                     flexDirection: `column`,
+                    height: `auto`,
                     margin: `0`,
                     textAlign: `center`
                 }}
             >
-                <Pic src={Me} />
+                <Pic fixed={data.file.childImageSharp.fixed} alt="Front profile of Josh Drentlaw" />
                 <a href="https://github.com/JoshDrentlaw" target="_blank" rel="noopener noreferrer" style={{ marginTop: `1em` }}>GitHub</a>
                 <h1>A Little About Me</h1>
                 <p>My name is Josh Drentlaw, and I live in Riverside, CA.</p>

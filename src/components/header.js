@@ -24,9 +24,11 @@ const Wrapper = styled.div`
     height: 100%;
     justify-content: space-between;
     margin: 0 auto;
+    overflow-x: scroll;
     width: 100%;
 
     @media(min-width: 1024px) {
+        overflow-x: visible;
         width: 40%;
     }
 `
@@ -53,6 +55,7 @@ const Header = () => {
                 <A id="about" activeClassName="active" to="/about/">About</A>
                 <A id="work" activeClassName="active" to="/work/">Work</A>
                 <A id="contact" activeClassName="active" to="/contact/">Hire</A>
+                <A id="blog" activeClassName="active" to="/blog/">Blog</A>
             </Wrapper>
         </Nav>
     )

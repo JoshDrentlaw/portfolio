@@ -7,13 +7,17 @@ import styled from 'styled-components'
 
 import Layout, { Container } from '../components/layout'
 
-const ImgContainer = styled.div`
-    height: 0;
-    margin: 0.5rem auto 0.5rem;
-    padding-top: 56.25%;
-    position: relative;
-    width: calc(100% - 1rem);
+const WorkContainer = styled(Container)`
+    justify-content: center;
+    font-size: calc(18pt + (16 - 18) * (100vw - 300px) / (880 - 300));
+    margin: 1em 0;
 
+    @media(min-width: 1024px) {
+        justify-content: space-between;
+    }
+`
+
+const ImgContainer = styled.div`
     img {
         height: 100%;
         left: 0;
@@ -27,13 +31,13 @@ const WorkItem = (props) => (
     <>
         <div className="large">
             <ImgContainer>
+                <p>Website for <a href={props.url} target="_blank" rel="noopener noreferrer">{props.name}</a></p>
                 <a href={props.url} target="_blank" rel="noopener noreferrer">
                     <Img fluid={props.src} alt={props.alt} />
                 </a>
             </ImgContainer>
         </div>
         <div className="small">
-            <p>Website for <a href={props.url} target="_blank" rel="noopener noreferrer">{props.name}</a></p>
             <p>{props.gatsby}</p>
             <p>{props.netlify}</p>
         </div>
@@ -67,12 +71,10 @@ const Work = () => {
         }
     `)
 
-    console.log(data)
-
     return (
         <Layout>
-            <SEO title="JDWD | Work" description="Josh Drentlaw's web development work using the amazingly powerful GatsbyJS and Netlify platforms." />
-            <Container>
+            <SEO title="Work | Josh Drentlaw Web Development" description="Josh Drentlaw's web development work using the amazingly powerful GatsbyJS and Netlify platforms." />
+            <WorkContainer style={{ marginTop: `0`, paddingTop: `0` }}>
                 <WorkItem
                     alt="Image of the Penny House Weddings website."
                     gatsby="Uses Gatsby Image to source and lazy-load images. Sources video content from Vimeo."
@@ -81,8 +83,8 @@ const Work = () => {
                     src={data.pennyhouseweddings.childImageSharp.fluid}
                     url="https://pennyhouseweddings.com"
                 />
-            </Container>
-            <Container>
+            </WorkContainer>
+            <WorkContainer>
                 <WorkItem
                     alt="Image of the Socal Earth Farm website."
                     gatsby="Uses Gatsby Image to source and lazy-load images."
@@ -91,8 +93,8 @@ const Work = () => {
                     src={data.socalearthfarm.childImageSharp.fluid}
                     url="https://socalearthfarm.netlify.com"
                 />
-            </Container>
-            <Container>
+            </WorkContainer>
+            <WorkContainer>
                 <WorkItem
                     alt="Image of Wally Prankatz Racing School website"
                     gatsby="Uses Gatsby Image to source and lazy-load images."
@@ -101,7 +103,7 @@ const Work = () => {
                     src={data.wallyracing.childImageSharp.fluid}
                     url="https://wallyracing.netlify.com"
                 />
-            </Container>
+            </WorkContainer>
         </Layout>
     )
 }
