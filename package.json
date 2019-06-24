@@ -1,11 +1,12 @@
 {
   "name": "portfolio",
+  "private": true,
   "version": "1.0.0",
   "description": "Josh Drentlaw Web Development",
   "scripts": {
-    "build": "webpack",
+    "build": "gatsby build",
     "start": "gatsby develop",
-    "netlify": "netlify --live",
+    "netlify": "netlify dev --live",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

@@ -5,9 +5,9 @@ import styled from 'styled-components'
 
 import Layout, { Container } from '../components/layout'
 
-import Gatsby from '../images/gatsbyjs-icon-inline.svg'
-import Netlify from '../images/netlify-icon-inline.svg'
-import Heart from '../images/heart-inline.svg'
+import Gatsby from '../images/gatsbyjs-icon.inline.svg'
+import Netlify from '../images/netlify-icon.inline.svg'
+import Heart from '../images/heart.inline.svg'
 
 const Heading = styled.h1`
     align-self: start;
@@ -73,18 +73,18 @@ const Index = () => {
                     Build powerful static sites with GatsbyJS and Netlify.
                 </Heading>
                 <Logos>
-                    <img src={Gatsby} alt="The Gatsby logo" />
+                    <Gatsby />
                     <span>&#43;</span>
-                    <img src={Netlify} alt="The Netlify logo" />
+                    <Netlify />
                     <span>&#61;</span>
-                    <img src={Heart} alt="A heart" />
+                    <Heart />
                 </Logos>
             </Container>
             <SubHeading style={{ marginTop: '4em' }}>My name is Josh Drentlaw! I'm a front-end web developer in Riverside, CA. If your small to medium business or project needs a static site, look nowhere else!</SubHeading>
             <Container>
                 <div className="small">
                     <H3>What is GatsbyJS?</H3>
-                    <img src={Gatsby} alt="The Gatsby logo" />
+                    <Gatsby />
                 </div>
                 <div className="large">
                     <p>GatsbyJS is a web framework that makes creating static websites extremely simple.</p>
@@ -96,7 +96,7 @@ const Index = () => {
             <Container>
                 <div className="small">
                     <H3>What is Netlify?</H3>
-                    <img src={Netlify} alt="The Netlify logo" />
+                    <Netlify />
                 </div>
                 <div className="large">
                     <p>Netlify is a (mostly) free web hosting platform.</p>

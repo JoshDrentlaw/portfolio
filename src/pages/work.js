@@ -1,15 +1,13 @@
 import React from 'react'
 import SEO from "../components/seo"
+import Img from 'gatsby-image'
+import { useStaticQuery, graphql } from 'gatsby'
 
 import styled from 'styled-components'
 
 import Layout, { Container } from '../components/layout'
 
-import PennyHouse from '../images/pennyhouseweddings.png'
-import EarthFarm from '../images/socalearthfarm.png'
-import Wally from '../images/wallyracing.png'
-
-const Img = styled.div`
+const ImgContainer = styled.div`
     height: 0;
     margin: 0.5rem auto 0.5rem;
     padding-top: 56.25%;
@@ -28,11 +26,11 @@ const Img = styled.div`
 const WorkItem = (props) => (
     <>
         <div className="large">
-            <Img>
+            <ImgContainer>
                 <a href={props.url} target="_blank" rel="noopener noreferrer">
-                    <img src={props.src} alt={props.alt} />
+                    <Img fluid={props.src} alt={props.alt} />
                 </a>
-            </Img>
+            </ImgContainer>
         </div>
         <div className="small">
             <p>Website for <a href={props.url} target="_blank" rel="noopener noreferrer">{props.name}</a></p>
@@ -43,6 +41,34 @@ const WorkItem = (props) => (
 )
 
 const Work = () => {
+    const data = useStaticQuery(graphql`
+        {
+            pennyhouseweddings:file(relativePath: {eq: "pennyhouseweddings.png"}) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+            socalearthfarm: file(relativePath: {eq: "socalearthfarm.png"}) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+            wallyracing: file(relativePath: {eq: "wallyracing.png"}) {
+                childImageSharp {
+                    fluid {
+                        ...GatsbyImageSharpFluid
+                    }
+                }
+            }
+        }
+    `)
+
+    console.log(data)
+
     return (
         <Layout>
             <SEO title="JDWD | Work" description="Josh Drentlaw's web development work using the amazingly powerful GatsbyJS and Netlify platforms." />
@@ -52,7 +78,7 @@ const Work = () => {
                     gatsby="Uses Gatsby Image to source and lazy-load images. Sources video content from Vimeo."
                     name="Penny House Weddings"
                     netlify="Uses Netlify Forms. When the owner uploads videos to their Vimeo account, they appeaer on the website."
-                    src={PennyHouse}
+                    src={data.pennyhouseweddings.childImageSharp.fluid}
                     url="https://pennyhouseweddings.com"
                 />
             </Container>
@@ -62,7 +88,7 @@ const Work = () => {
                     gatsby="Uses Gatsby Image to source and lazy-load images."
                     name="Socal Earth Farm"
                     netlify="Uses NetlifyCMS to update delivery hours and entries in the FAQ. Uses Netlify Forms."
-                    src={EarthFarm}
+                    src={data.socalearthfarm.childImageSharp.fluid}
                     url="https://socalearthfarm.netlify.com"
                 />
             </Container>
@@ -72,7 +98,7 @@ const Work = () => {
                     gatsby="Uses Gatsby Image to source and lazy-load images."
                     name="Wally Prankatz Racing School"
                     netlify="Uses Netlify Forms."
-                    src={Wally}
+                    src={data.wallyracing.childImageSharp.fluid}
                     url="https://wallyracing.netlify.com"
                 />
             </Container>
