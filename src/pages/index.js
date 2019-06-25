@@ -74,7 +74,7 @@ const Index = () => {
     return (
         <Layout>
             <SEO title="Home | Josh Drentlaw Web Development" description="Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify." />
-            <Container height="calc(100vh - 112px)">
+            <Container height="calc(100vh - (2em + 56px))">
                 <Heading>
                     Build powerful static sites with GatsbyJS and Netlify.
                 </Heading>

@@ -18,7 +18,7 @@ const Body = styled.div`
 const Main = styled.main`
     box-sizing: border-box;
     height: 100%;
-    min-height: calc(100vh - 2em - 112px);
+    min-height: calc(100vh - (2em + 112px));
     margin: 0 auto;
     padding: 2em;
     width: 100%;
