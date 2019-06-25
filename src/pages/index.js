@@ -13,7 +13,7 @@ const Heading = styled.h1`
     align-self: start;
     display: inline-flex;
     flex-direction: column;
-    font-size: calc(45px + (70 - 45) * (100vw - 300px) / (880 - 300));
+    font-size: calc(62px + (70 - 62) * (100vw - 300px) / (880 - 300));
     height: calc(100% - 2em);
     justify-content: start;
     line-height: calc(1em + (1.2 - 1.1) * (100vw - 300px) / (880 - 300));
@@ -45,7 +45,7 @@ const H3 = styled.h3`
 const Logos = styled.div`
     align-items: center;
     display: flex;
-    height: auto;
+    height: 100px;
     justify-content: space-around;
     width: 100%;
 
@@ -56,7 +56,7 @@ const Logos = styled.div`
 
     svg {
         width: 200px;
-        height: auto;
+        height: 100px;
     }
 
     @media(min-width: 1024px) {
@@ -74,11 +74,7 @@ const Index = () => {
     return (
         <Layout>
             <SEO title="Home | Josh Drentlaw Web Development" description="Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify." />
-            <Container style={{
-                height: `calc((100vh - 4em) - 56px)`,
-                margin: `0.75em 0`,
-                padding: `0`
-            }}>
+            <Container height="calc(100vh - 112px)">
                 <Heading>
                     Build powerful static sites with GatsbyJS and Netlify.
                 </Heading>

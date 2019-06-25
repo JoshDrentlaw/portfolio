@@ -313,6 +313,7 @@ module.exports = {
       large: '250px',
       full: '100%',
       screen: '100vh',
+      mobile: 'calc(100vh - 56px)',
     }),
     minWidth: {
       '0': '0',

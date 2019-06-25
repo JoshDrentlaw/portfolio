@@ -35,10 +35,9 @@ const Main = styled.main`
 export const Container = styled.section`
     align-items: center;
     display: flex;
+    height: ${props => props.height || 'auto'};
     flex-direction: column;
-    height: 100vh;
-    justify-content: space-around;
-    padding: 2em 0;
+    justify-content: center;
     width: 100%;
 
     a {
