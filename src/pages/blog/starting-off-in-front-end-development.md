@@ -1,6 +1,6 @@
 ---
 author: "Josh Drentlaw"
-title: "Starting off in front-end development"
+title: "Starting Off In Front-End Development"
 date: "2019-06-24"
 ---
 
