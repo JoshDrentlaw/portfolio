@@ -13,7 +13,7 @@ const Heading = styled.h1`
     align-self: start;
     display: inline-flex;
     flex-direction: column;
-    font-size: calc(62px + (70 - 62) * (100vw - 300px) / (880 - 300));
+    font-size: calc(38pt + (54 - 38) * (100vw - 300px) / (880 - 300));
     height: calc(100% - 2em);
     justify-content: start;
     line-height: calc(1em + (1.2 - 1.1) * (100vw - 300px) / (880 - 300));
