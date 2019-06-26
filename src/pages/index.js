@@ -10,11 +10,9 @@ import Netlify from '../assets/svg/netlify-icon.inline.svg'
 import Heart from '../assets/svg/heart.inline.svg'
 
 const Heading = styled.h1`
-    align-self: start;
     display: inline-flex;
     flex-direction: column;
-    font-size: calc(38pt + (54 - 38) * (100vw - 300px) / (880 - 300));
-    height: calc(100% - 2em);
+    font-size: calc(47pt + (70 - 47) * (100vw - 300px) / (880 - 300));
     justify-content: start;
     line-height: calc(1em + (1.2 - 1.1) * (100vw - 300px) / (880 - 300));
     margin: 0;
@@ -62,7 +60,7 @@ const Logos = styled.div`
     @media(min-width: 1024px) {
         flex-direction: column;
         height: calc(100% - 2em);
-        width: auto;
+        width: 200px;
 
         svg {
             height: 200px;
@@ -74,7 +72,7 @@ const Index = () => {
     return (
         <Layout>
             <SEO title="Home | Josh Drentlaw Web Development" description="Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify." />
-            <Container height="calc(100vh - (2em + 56px))">
+            <Container heightSm="calc(100vh - (2em + 56px))" heightLg="calc(100vh - (2em + 56px))">
                 <Heading>
                     Build powerful static sites with GatsbyJS and Netlify.
                 </Heading>

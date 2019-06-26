@@ -20,11 +20,12 @@ const Main = styled.main`
     height: 100%;
     min-height: calc(100vh - (2em + 112px));
     margin: 0 auto;
-    padding: 2em;
+    padding: 0 2em;
     width: 100%;
 
     @media(min-width: 1024px) {
         width: 65%;
+        padding: 2em;
     }
 
     @media(min-Width: 1680px) {
@@ -35,7 +36,7 @@ const Main = styled.main`
 export const Container = styled.section`
     align-items: center;
     display: flex;
-    height: ${props => props.height || 'auto'};
+    height: ${props => props.heightSm || 'auto'};
     flex-direction: column;
     justify-content: center;
     width: 100%;
@@ -61,7 +62,7 @@ export const Container = styled.section`
 
     @media(min-width: 1024px) {
         flex-direction: row;
-        height: 40vh;
+        height: ${props => props.heightLg || '40vh'};
 
         .small {
             text-align: left;
