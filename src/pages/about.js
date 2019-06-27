@@ -29,14 +29,7 @@ const About = () => {
     return (
         <Layout>
             <SEO title="About | Josh Drentlaw Web Development" description="Get to know Josh Drentlaw a little bit. He does more than just code websites." />
-            <Container
-                style={{
-                    flexDirection: `column`,
-                    height: `auto`,
-                    margin: `0`,
-                    textAlign: `center`
-                }}
-            >
+            <Container padding="2em 0">
                 <Pic fixed={data.file.childImageSharp.fixed} alt="Front profile of Josh Drentlaw" />
                 <a href="https://github.com/JoshDrentlaw" target="_blank" rel="noopener noreferrer" style={{ marginTop: `1em` }}>GitHub</a>
                 <h1>A Little About Me</h1>
