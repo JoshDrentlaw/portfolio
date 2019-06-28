@@ -17,18 +17,6 @@ const Heading = styled.h1`
     line-height: calc(1em + (1.2 - 1.1) * (100vw - 300px) / (880 - 300));
     margin: 0;
     width: 100%;
-
-    /* @media(min-width: 768px) {
-        font-size: 4.1em;
-    }
-
-    @media(min-width: 1024px) {
-        font-size: 4.8em;
-    }
-
-    @media(min-width: 1680px) {
-        font-size: 5.5em;
-    } */
 `
 
 const SubHeading = styled.p`

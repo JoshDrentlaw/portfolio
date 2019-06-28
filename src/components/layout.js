@@ -18,7 +18,7 @@ const Body = styled.div`
 const Main = styled.main`
     box-sizing: border-box;
     height: 100%;
-    min-height: calc(100vh - (2em + 112px));
+    min-height: calc(100vh - 112px);
     margin: 0 auto;
     padding: 0 2em;
     width: 100%;
@@ -39,7 +39,7 @@ export const Container = styled.section`
     height: ${props => props.heightSm || 'auto'};
     flex-direction: column;
     justify-content: center;
-    padding: ${props => props.padding || 0};
+    padding: ${props => props.padding || '0'};
     width: 100%;
 
     a {
