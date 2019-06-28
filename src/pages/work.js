@@ -9,7 +9,7 @@ import Layout, { Container } from '../components/layout'
 
 const WorkContainer = styled(Container)`
     justify-content: center;
-    font-size: calc(18pt + (16 - 18) * (100vw - 300px) / (880 - 300));
+    font-size: calc(16pt * (100vw - 300px) / (880 - 300));
     margin: 1em 0;
 
     @media(min-width: 1024px) {

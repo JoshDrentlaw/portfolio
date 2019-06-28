@@ -12,7 +12,7 @@ import Heart from '../assets/svg/heart.inline.svg'
 const Heading = styled.h1`
     display: inline-flex;
     flex-direction: column;
-    font-size: calc(47pt + (70 - 47) * (100vw - 300px) / (880 - 300));
+    font-size: calc(40pt + (65 - 40) * (100vw - 300px) / (880 - 300));
     justify-content: start;
     line-height: calc(1em + (1.2 - 1.1) * (100vw - 300px) / (880 - 300));
     margin: 0;
@@ -60,7 +60,7 @@ const Index = () => {
     return (
         <Layout>
             <SEO title="Home | Josh Drentlaw Web Development" description="Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify." />
-            <Container heightSm="calc(100vh - (2em + 56px))" heightLg="calc(100vh - (2em + 56px))">
+            <Container heightLg="calc(100vh - (2em + 56px))" padding="2em 0 0">
                 <Heading>
                     Build powerful static sites with GatsbyJS and Netlify.
                 </Heading>
