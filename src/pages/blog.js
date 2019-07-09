@@ -4,7 +4,7 @@ import SEO from "../components/seo"
 
 import Layout, { Container } from '../components/layout'
 
-import styled from 'styled-components'
+/* import styled from 'styled-components' */
 
 const Blog = () => {
     const data = useStaticQuery(graphql`

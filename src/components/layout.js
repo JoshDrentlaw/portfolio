@@ -8,7 +8,7 @@ import Header from "./header"
 import Footer from './footer'
 
 const Body = styled.div`
-    background-image: linear-gradient(135deg, #021525, #052644, #053658, #10343c, #092720);
+    background-image: linear-gradient(135deg, #021525, #052644, #053658, #112e42,#112425);
     color: white;
     font-family: sans-serif;
     min-height: 100vh;

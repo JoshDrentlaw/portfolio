@@ -3,6 +3,19 @@ import { graphql } from 'gatsby'
 
 import Layout from '../components/layout'
 
+import styled from 'styled-components'
+
+const Body = styled.main`
+    a {
+        color: white;
+        font-weight: 600;
+
+        &:hover, &:visited {
+            color: red;
+        }
+    }
+`
+
 export default ({ data }) => {
     const post = data.markdownRemark
     
@@ -11,7 +24,7 @@ export default ({ data }) => {
             <div>
                 <h1>{post.frontmatter.title}</h1>
                 <h3>Written by {post.frontmatter.author} on {post.frontmatter.date}</h3>
-                <div dangerouslySetInnerHTML={{ __html: post.html }} />
+                <Body dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
         </Layout>
     )
