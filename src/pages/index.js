@@ -62,7 +62,7 @@ const Index = () => {
             <SEO title="Home | Josh Drentlaw Web Development" description="Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify." />
             <Container heightSm="calc(100vh - (2em + 56px))" heightLg="calc(100vh - (2em + 56px))" padding="2em 0 0">
                 <Heading>
-                    Build powerful static sites with GatsbyJS and Netlify.
+                    Get a powerful static site with GatsbyJS and Netlify.
                 </Heading>
                 <Logos>
                     <Gatsby />

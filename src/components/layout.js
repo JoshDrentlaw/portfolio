@@ -37,7 +37,7 @@ export const Container = styled.section`
     align-items: center;
     display: flex;
     height: ${props => props.heightSm || 'auto'};
-    flex-direction: column;
+    flex-direction: ${props => props.flexDirSm || 'column'};
     justify-content: center;
     padding: ${props => props.padding || '0'};
     width: 100%;
@@ -62,8 +62,9 @@ export const Container = styled.section`
     }
 
     @media(min-width: 1024px) {
-        flex-direction: row;
+        flex-direction: ${props => props.flexDirLg || 'row'};
         height: ${props => props.heightLg || '40vh'};
+        justify-content: ${props => props.justifyLg || 'center'};
 
         .small {
             text-align: left;
