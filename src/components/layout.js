@@ -39,6 +39,7 @@ export const Container = styled.section`
     height: ${props => props.heightSm || 'auto'};
     flex-direction: ${props => props.flexDirSm || 'column'};
     justify-content: center;
+    margin: ${props => props.margin || '0'};
     padding: ${props => props.padding || '0'};
     width: 100%;
 

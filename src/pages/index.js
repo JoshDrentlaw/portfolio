@@ -21,6 +21,7 @@ const Heading = styled.h1`
 
 const SubHeading = styled.p`
     font-size: 2em;
+    margin: 4em 0;
     text-align: center;
 `
 
@@ -53,6 +54,19 @@ const Logos = styled.div`
         svg {
             height: 200px;
         }
+    }
+`
+
+const DetailList = styled.dl`
+    margin: 2em 0;
+
+    dt {
+        font-size: 1.3em;
+        margin: 0.7em 0 0.5em;
+    }
+
+    dd {
+        margin-left: 0;
     }
 `
 
@@ -107,32 +121,41 @@ const Index = () => {
                     <Heart />
                 </Logos>
             </Container>
-            <SubHeading style={{ marginTop: '4em' }}>My name is Josh Drentlaw! I'm a front-end web developer in Riverside, CA. If your small to medium business or project needs a static site, look nowhere else!</SubHeading>
-            <Container>
+            <SubHeading>My name is Josh Drentlaw! I'm a front-end web developer in Riverside, CA. If your small to medium business or project needs a static site, look nowhere else!</SubHeading>
+            <Container margin="2em 0">
                 <div className="small">
                     <H3>What is GatsbyJS?</H3>
                     <Gatsby style={{ height: `180px`}} />
                 </div>
-                <div className="large">
-                    <p>GatsbyJS is a web framework that makes creating static websites extremely simple.</p>
-                    <p>GatsbyJS hyper-fast and easy to upgrade and expand.</p>
-                    <p>GatsbyJS offers hundreds of plugins that allow you to source content and data from just about anywhere.</p>
-                    <p>GatsbyJS offers a lot out of the box, giving me more time to focus on your dream.</p>
-                </div>
+                <DetailList className="large">
+                    <dt>Powerful Static Sites</dt>
+                    <dd>GatsbyJS is a web framework that makes creating static websites extremely simple.</dd>
+                    <dt>Performance and Enhancements</dt>
+                    <dd>GatsbyJS static sites are hyper-fast and easy to upgrade and expand.</dd>
+                    <dt>Data</dt>
+                    <dd>GatsbyJS offers hundreds of plugins that allow you to source content and data from just about anywhere.</dd>
+                    <dt>UX/DX</dt>
+                    <dd>GatsbyJS offers a lot out of the box, giving me more time to focus on your dream.</dd>
+                </DetailList>
+                <button style={{ backgroundColor: "purple", padding: "1em"}}><a href="https://gatsbyjs.org">Learn more</a></button>
             </Container>
-            <Container>
+            <Container margin="2em 0">
                 <div className="small">
                     <H3>What is Netlify?</H3>
                     <Netlify style={{ height: `180px`}} />
                 </div>
-                <div className="large">
-                    <p>Netlify is a (mostly) free web hosting platform.</p>
-                    <p>Netlify makes it fast and easy to deploy changes to your website.</p>
-                    <p>Netlify allows you to add fully functional forms in minutes.</p>
-                    <p>With NetlifyCMS you can take full control of your site after it's built.</p>
-                </div>
+                <DetailList className="large">
+                    <dt>Hosting</dt>
+                    <dd>Netlify is a web hosting platform with a powerful free tier and competitive pricing options.</dd>
+                    <dt>Continuous Deployment</dt>
+                    <dd>Netlify makes it fast and easy to deploy changes to your website.</dd>
+                    <dt>Super Simple Forms</dt>
+                    <dd>Netlify allows you to add fully functional forms in minutes.</dd>
+                    <dt>Content Management</dt>
+                    <dd>With NetlifyCMS you can take full control of your site after it's built.</dd>
+                </DetailList>
             </Container>
-            <SubHeading>Together we will create the website of your dreams!</SubHeading>
+            <SubHeading>An amazing website for your business is waiting just around the corner!</SubHeading>
         </Layout>
     )
 }

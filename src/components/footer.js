@@ -4,6 +4,11 @@ import styled from 'styled-components'
 
 const Foot = styled.footer`
     height: 56px;
+    margin-bottom: 56px;
+
+    @media(min-width: 1024px) {
+        margin-bottom: 0;
+    }
 `
 
 const Wrapper = styled.div`
