@@ -59,7 +59,42 @@ const Logos = styled.div`
 const Index = () => {
     return (
         <Layout>
-            <SEO title="Home | Josh Drentlaw Web Development" description="Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify." />
+            <SEO
+                title="Home | Josh Drentlaw Web Development"
+                description="Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify."
+                keywords={[
+                    "josh",
+                    "drentlaw",
+                    "josh drentlaw",
+                    "web",
+                    "design",
+                    "development",
+                    "developer",
+                    "web design",
+                    "web designer",
+                    "web development",
+                    "web developer",
+                    "riverside",
+                    "riverside web design",
+                    "riverside web designer",
+                    "riverside web development",
+                    "riverside web developer",
+                    "gatsby",
+                    "gatsbyjs",
+                    "netlify",
+                    "static",
+                    "site",
+                    "static site",
+                    "web site",
+                    "cheap web site",
+                    "cheap web site riverside",
+                    "cheap static site",
+                    "cheap static site riverside",
+                    "wordpress",
+                    "cheap wordpress",
+                    "cheap wordpress site"
+                ]}
+            />
             <Container heightSm="calc(100vh - (2em + 56px))" heightLg="calc(100vh - (2em + 56px))" padding="2em 0 0">
                 <Heading>
                     Get a powerful static site with GatsbyJS and Netlify.
