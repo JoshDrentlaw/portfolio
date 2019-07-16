@@ -84,6 +84,7 @@ const Work = () => {
                     url="https://pennyhouseweddings.com"
                 />
             </WorkContainer>
+            <h2 style={{ textAlign: "center", textDecoration: "underline", margin: "2em 0 1em"}}>Coming Soon</h2>
             <WorkContainer>
                 <WorkItem
                     alt="Image of the Socal Earth Farm website."
