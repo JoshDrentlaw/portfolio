@@ -34,7 +34,7 @@ const Blog = () => {
         <Layout>
             <SEO title="Blog | Josh Drentlaw Web Development" description="Personal blog for Josh Drentlaw of Josh Drentlaw Web Development. Josh Drentlaw writes about front-end web development, GatsbyJS, and Netlify." />
             <Container flexDirLg="column">
-                <h1>Front-End Web Development Blog</h1>
+                <h1>Building Blocks: A Web Development Podcast and Blog</h1>
                 <h4>{posts.totalCount} Posts</h4>
                 {posts.edges.map(({ node }) => (
                     <div key={node.id}>
