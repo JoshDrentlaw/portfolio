@@ -70,6 +70,18 @@ const DetailList = styled.dl`
     }
 `
 
+const Button = styled.button`
+    background-color: ${props => props.bgColor || "default"};
+    background-image: ${props => props.bgImage || "none"};
+    border: none;
+    border-radius: 5px;
+    padding: 1.5em;
+
+    a {
+        text-decoration: none;
+    }
+`
+
 const Index = () => {
     return (
         <Layout>
@@ -137,7 +149,7 @@ const Index = () => {
                     <dt>UX/DX</dt>
                     <dd>GatsbyJS offers a lot out of the box, giving me more time to focus on your dream.</dd>
                 </DetailList>
-                <button style={{ backgroundColor: "purple", padding: "1em"}}><a href="https://gatsbyjs.org">Learn more</a></button>
+                <Button bgColor="rebeccapurple"><a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">Learn more</a></Button>
             </Container>
             <Container margin="2em 0">
                 <div className="small">
@@ -154,6 +166,7 @@ const Index = () => {
                     <dt>Content Management</dt>
                     <dd>With NetlifyCMS you can take full control of your site after it's built.</dd>
                 </DetailList>
+                <Button bgImage="linear-gradient(to bottom, #20c5b7, #4c9abe)"><a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Learn more</a></Button>
             </Container>
             <SubHeading>An amazing website for your business is waiting just around the corner!</SubHeading>
         </Layout>
