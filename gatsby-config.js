@@ -7,9 +7,11 @@ module.exports = {
     title: `Josh Drentlaw Web Development`,
     description: `Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify.`,
     author: `Josh Drentlaw`,
+    siteUrl: `https://www.joshdrentlaw.com`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-sitemap`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
