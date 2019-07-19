@@ -76,6 +76,10 @@ export const Container = styled.section`
             text-align: left;
             width: 50%;
         }
+
+        button {
+            margin-left: 50px;
+        }
     }
 `
 

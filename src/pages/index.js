@@ -87,7 +87,7 @@ const Index = () => {
         <Layout>
             <SEO
                 title="Home | Josh Drentlaw Web Development"
-                description="Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify."
+                description="Get a blazing fast static site for your small business or non-profit from Josh Drentlaw Web Developement using GatsbyJS and Netlify."
                 keywords={[
                     "josh",
                     "drentlaw",
@@ -133,7 +133,7 @@ const Index = () => {
                     <Heart />
                 </Logos>
             </Container>
-            <SubHeading>My name is Josh Drentlaw! I'm a front-end web developer in Riverside, CA. If your small to medium business or project needs a static site, look nowhere else!</SubHeading>
+            <SubHeading>Welcome to Josh Drentlaw Web Development! My goal is build your company or non-profit organization a blazing fast static site that performs well and is accessible to everyone. Keep reading to learn a little bit about the technologies I use to accomplish my goal.</SubHeading>
             <Container margin="2em 0">
                 <div className="small">
                     <H3>What is GatsbyJS?</H3>
@@ -146,10 +146,12 @@ const Index = () => {
                     <dd>GatsbyJS static sites are hyper-fast and easy to upgrade and expand.</dd>
                     <dt>Data</dt>
                     <dd>GatsbyJS offers hundreds of plugins that allow you to source content and data from just about anywhere.</dd>
-                    <dt>UX/DX</dt>
-                    <dd>GatsbyJS offers a lot out of the box, giving me more time to focus on your dream.</dd>
+                    <dt>Integrate with WordPress</dt>
+                    <dd>Does your data live in a WordPress site? Gatsby can source that data, giving you the ability to use the CMS your familiar with.</dd>
                 </DetailList>
-                <Button bgColor="rebeccapurple"><a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">Learn more</a></Button>
+                <div className="small">
+                    <Button bgColor="rebeccapurple"><a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">Learn more</a></Button>
+                </div>
             </Container>
             <Container margin="2em 0">
                 <div className="small">
@@ -166,9 +168,11 @@ const Index = () => {
                     <dt>Content Management</dt>
                     <dd>With NetlifyCMS you can take full control of your site after it's built.</dd>
                 </DetailList>
-                <Button bgImage="linear-gradient(to bottom, #20c5b7, #4c9abe)"><a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Learn more</a></Button>
+                <div className="small">
+                    <Button bgImage="linear-gradient(to bottom, #20c5b7, #4c9abe)"><a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Learn more</a></Button>
+                </div>
             </Container>
-            <SubHeading>An amazing website for your business is waiting just around the corner!</SubHeading>
+            <SubHeading>An amazing website for your business is waiting just around the corner! Get in <a href="/contact/">contact</a> with me today!</SubHeading>
         </Layout>
     )
 }
