@@ -5,7 +5,7 @@
   "description": "Josh Drentlaw Web Development",
   "scripts": {
     "build": "gatsby build",
-    "start": "gatsby develop",
+    "dev": "gatsby develop",
     "serve": "gatsby serve",
     "prod": "npm run build && npm run serve",
     "netlify": "netlify dev --live",
@@ -32,6 +32,7 @@
   },
   "homepage": "https://github.com/JoshDrentlaw/portfolio#readme",
   "dependencies": {
+    "@sanity/block-content-to-react": "^2.0.6",
     "autoprefixer": "^9.5.1",
     "babel-plugin-styled-components": "^1.10.0",
     "gatsby": "^2.5.5",
@@ -47,6 +48,7 @@
     "gatsby-plugin-styled-components": "^3.0.7",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-source-filesystem": "^2.0.36",
+    "gatsby-source-sanity": "^5.0.1",
     "gatsby-transformer-remark": "^2.5.0",
     "gatsby-transformer-sharp": "^2.1.19",
     "prop-types": "^15.7.2",

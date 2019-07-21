@@ -36,6 +36,15 @@ module.exports = {
     `gatsby-plugin-sharp`,
     'gatsby-plugin-postcss',
     {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: '2s5a6019',
+        dataset: 'blog',
+        token: process.env.SANITY_TOKEN,
+        watchMode: true,
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `portfolio`,
