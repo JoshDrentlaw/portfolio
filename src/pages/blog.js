@@ -9,26 +9,23 @@ import Layout, { Container } from '../components/layout'
 const Blog = () => {
     const data = useStaticQuery(graphql`
         query {
-            allMarkdownRemark(sort: { fields: [frontmatter___date], order: DESC }) {
+            allSanityPost(sort: { fields: publishedAt, order: DESC }) {
                 totalCount
                 edges {
                     node {
                         id
-                        frontmatter {
-                            title
-                            date(formatString: "DD MMMM, YYYY")
+                        title
+                        publishedAt(formatString: "DD MMMM, YYYY")
+                        slug {
+                            current
                         }
-                        fields {
-                            slug
-                        }
-                        excerpt
                     }
                 }
             }
         }
     `)
 
-    const posts = data.allMarkdownRemark
+    const posts = data.allSanityPost
 
     return (
         <Layout>
@@ -38,9 +35,9 @@ const Blog = () => {
                 <h4>{posts.totalCount} Posts</h4>
                 {posts.edges.map(({ node }) => (
                     <div key={node.id}>
-                        <Link to={node.fields.slug}>
-                            <h3>{node.frontmatter.title}{" - "}{node.frontmatter.date}</h3>
-                            <p>{node.excerpt}</p>
+                        <Link to={node.slug.current}>
+                            <h3>{node.title}{" - "}{node.publishedAt}</h3>
+                            {/* <p>{node.excerpt}</p> */}
                         </Link>
                     </div>
                 ))}
