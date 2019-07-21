@@ -19,6 +19,7 @@ const Blog = () => {
                         slug {
                             current
                         }
+                        _rawBody
                     }
                 }
             }
@@ -26,6 +27,18 @@ const Blog = () => {
     `)
 
     const posts = data.allSanityPost
+
+    const limit = (...data) => {
+        let string = data[0].children[0].text;
+        if (string.length > 200) {
+            return string.slice(0, 200) + "...";
+        }
+        else {
+            return string;
+        }
+    }
+
+    console.log(posts)
 
     return (
         <Layout>
@@ -37,7 +50,7 @@ const Blog = () => {
                     <div key={node.id}>
                         <Link to={node.slug.current}>
                             <h3>{node.title}{" - "}{node.publishedAt}</h3>
-                            {/* <p>{node.excerpt}</p> */}
+                            <p style={{paddingLeft: '2em'}}>{limit(node._rawBody[0])}</p>
                         </Link>
                     </div>
                 ))}
