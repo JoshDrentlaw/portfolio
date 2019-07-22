@@ -118,7 +118,9 @@ const Index = () => {
                     "cheap static site riverside",
                     "wordpress",
                     "cheap wordpress",
-                    "cheap wordpress site"
+                    "cheap wordpress site",
+                    "graphic design",
+                    "digital marketing"
                 ]}
             />
             <Container heightSm="calc(100vh - (2em + 56px))" heightLg="calc(100vh - (2em + 56px))" padding="2em 0 0">

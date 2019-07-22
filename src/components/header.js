@@ -51,7 +51,7 @@ const Header = () => {
     return (
         <Nav>
             <Wrapper>
-                <A id="home" activeClassName="active" exact to="/">Home</A>
+                <A id="home" activeClassName="active" to="/">Home</A>
                 <A id="about" activeClassName="active" to="/about/">About</A>
                 <A id="work" activeClassName="active" to="/work/">Work</A>
                 <A id="contact" activeClassName="active" to="/contact/">Hire</A>
