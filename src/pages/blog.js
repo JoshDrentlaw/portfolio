@@ -30,7 +30,7 @@ const Blog = () => {
 
     return (
         <Layout>
-            <SEO title="Blog | Josh Drentlaw Web Development" description="Personal blog for Josh Drentlaw of Josh Drentlaw Web Development. Josh Drentlaw writes about front-end web development, GatsbyJS, and Netlify." />
+            <SEO title="Blog" description="Personal blog for Josh Drentlaw of Josh Drentlaw Web Development. Josh Drentlaw writes about front-end web development, GatsbyJS, and Netlify." />
             <Container flexDirLg="column">
                 <h1>Front-End Web Development Blog</h1>
                 <h4>{posts.totalCount} Posts</h4>

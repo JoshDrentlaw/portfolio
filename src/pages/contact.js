@@ -147,7 +147,7 @@ const Contact = () => {
     
     return (
         <Layout>
-            <SEO title="Hire | Josh Drentlaw Web Development" description="Please drop a line if you would like to contact Josh Drentlaw about a job. He's always looking for work!" />
+            <SEO title="Hire" description="Please drop a line if you would like to contact Josh Drentlaw about a job. He's always looking for work!" />
             <Container padding="1em 0" heightLg="80vh" justifyLg="space-between">
                 <h1>If you'd like to hire me...</h1>
                 <Form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">

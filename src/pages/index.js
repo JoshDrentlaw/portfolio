@@ -86,7 +86,7 @@ const Index = () => {
     return (
         <Layout>
             <SEO
-                title="Home | Josh Drentlaw Web Development"
+                title="Home"
                 description="Get a blazing fast static site for your small business or non-profit from Josh Drentlaw Web Developement using GatsbyJS and Netlify."
                 keywords={[
                     "josh",
