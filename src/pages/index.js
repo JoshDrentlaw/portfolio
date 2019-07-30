@@ -87,7 +87,7 @@ const Index = () => {
         <Layout>
             <SEO
                 title="Home"
-                description="Get a blazing fast static site for your small business or non-profit from Josh Drentlaw Web Developement using GatsbyJS and Netlify."
+                description="Get a blazing fast static site for your small business or non-profit from Josh Drentlaw Web Design using GatsbyJS and Netlify."
                 keywords={[
                     "josh",
                     "drentlaw",
@@ -135,7 +135,7 @@ const Index = () => {
                     <Heart />
                 </Logos>
             </Container>
-            <SubHeading>Welcome to Josh Drentlaw Web Development! My goal is build your company or non-profit organization a blazing fast static site that performs well and is accessible to everyone. Keep reading to learn a little bit about the technologies I use to accomplish my goal.</SubHeading>
+            <SubHeading>Welcome to Josh Drentlaw Web Design! My goal is build your company or non-profit organization a blazing fast static site that performs well and is accessible to everyone. Keep reading to learn a little bit about the technologies I use to accomplish my goal.</SubHeading>
             <Container margin="2em 0">
                 <div className="small">
                     <H3>What is GatsbyJS?</H3>

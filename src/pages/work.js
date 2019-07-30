@@ -73,7 +73,7 @@ const Work = () => {
 
     return (
         <Layout>
-            <SEO title="Work" description="Josh Drentlaw's web development work using the amazingly powerful GatsbyJS and Netlify platforms." />
+            <SEO title="Work" description="Josh Drentlaw's web design work using the amazingly powerful GatsbyJS and Netlify platforms." />
             <WorkContainer style={{ marginTop: `0`, paddingTop: `0` }}>
                 <WorkItem
                     alt="Image of the Penny House Weddings website."

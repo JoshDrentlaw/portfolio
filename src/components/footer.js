@@ -28,7 +28,7 @@ const Footer = () => {
     return (
         <Foot>
             <Wrapper>
-                Copyright 2019 Josh Drentlaw Web Development
+                Copyright 2019 Josh Drentlaw Web Design
             </Wrapper>
         </Foot>
     )

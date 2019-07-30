@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Josh Drentlaw Web Development`,
-    description: `Get a lightning fast static site from Josh Drentlaw Web Developement using GatsbyJS and Netlify.`,
+    title: `Josh Drentlaw Web Design`,
+    description: `Get a lightning fast static site from Josh Drentlaw Web Design using GatsbyJS and Netlify.`,
     author: `Josh Drentlaw`,
     siteUrl: `https://www.joshdrentlaw.com`,
   },
