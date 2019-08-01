@@ -7,6 +7,7 @@ import '../index.css'
 import styled from 'styled-components'
 
 import Facebook from '../assets/svg/facebook.inline.svg'
+import Maps from '../assets/svg/maps.inline.svg'
 
 import Header from "./header"
 import Footer from './footer'
@@ -87,6 +88,18 @@ export const Container = styled.section`
     }
 `
 
+const SocialWrapper = styled.div`
+    width: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    svg {
+        color: white;
+        fill: currentColor;
+    }
+`
+
 export const Socials = () => {
     const data = useStaticQuery(graphql`
         {
@@ -101,14 +114,17 @@ export const Socials = () => {
     `)
 
     return (
-        <div className="pl-px2 w-1/2">
-            <a href="#" className="text-white inline">
-                <Facebook className="fill-current w-4 h-4 inline" />
+        <SocialWrapper className="pl-px2 w-1/2">
+            <a href="https://www.facebook.com/jdwebdev" target="_blank" rel="noopener noreferrer">
+                <Facebook />
             </a>
-            <a href="#" className="text-white mr-4 inline">
+            <a href="#" target="_blank" rel="noopener noreferrer">
+                <Maps />
+            </a>
+            <a href="https://www.yelp.com/biz/josh-drentlaw-web-design-riverside-2" target="_blank" rel="noopener noreferrer">
                 <Img fixed={data.file.childImageSharp.fixed} alt="Yelp company logo" />
             </a>
-        </div>
+        </SocialWrapper>
     )
 }
 

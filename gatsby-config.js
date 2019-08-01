@@ -31,14 +31,6 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    {
-      resolve: `gatsby-source-sanity`,
-      options: {
-        projectId: '2s5a6019',
-        dataset: 'blog',
-        token: process.env.SANITY_TOKEN,
-      },
-    },
     `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,

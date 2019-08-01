@@ -304,7 +304,7 @@ module.exports = {
       '11/12': '91.66667%',
       full: '100%',
       screen: '100vw',
-      
+      '50': '50px',
     }),
     height: theme => ({
       auto: 'auto',
@@ -314,6 +314,7 @@ module.exports = {
       full: '100%',
       screen: '100vh',
       mobile: 'calc(100vh - 56px)',
+      '50': '50px',
     }),
     minWidth: {
       '0': '0',

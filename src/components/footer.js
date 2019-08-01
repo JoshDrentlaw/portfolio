@@ -17,7 +17,7 @@ const Wrapper = styled.div`
     align-items: center;
     display: flex;
     height: 100%;
-    justify-content: center;
+    justify-content: space-between;
     margin: 0 auto;
     text-align: center;
 
@@ -30,7 +30,7 @@ const Footer = () => {
     return (
         <Foot>
             <Wrapper>
-                Copyright 2019 Josh Drentlaw Web Design
+                © 2019 Josh Drentlaw Web Design
                 <Socials />
             </Wrapper>
         </Foot>
