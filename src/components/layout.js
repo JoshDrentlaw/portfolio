@@ -1,8 +1,12 @@
 import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 import PropTypes from "prop-types"
 
 import '../index.css'
 import styled from 'styled-components'
+
+import Facebook from '../assets/svg/facebook.inline.svg'
 
 import Header from "./header"
 import Footer from './footer'
@@ -82,6 +86,31 @@ export const Container = styled.section`
         }
     }
 `
+
+export const Socials = () => {
+    const data = useStaticQuery(graphql`
+        {
+            file(relativePath: {eq: "yelp.png"}) {
+                childImageSharp {
+                    fixed(width: 50, height: 50) {
+                        ...GatsbyImageSharpFixed
+                    }
+                }
+            }
+        }
+    `)
+
+    return (
+        <div className="pl-px2 w-1/2">
+            <a href="#" className="text-white inline">
+                <Facebook className="fill-current w-4 h-4 inline" />
+            </a>
+            <a href="#" className="text-white mr-4 inline">
+                <Img fixed={data.file.childImageSharp.fixed} alt="Yelp company logo" />
+            </a>
+        </div>
+    )
+}
 
 function Layout({ children }) {
     return (

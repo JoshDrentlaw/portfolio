@@ -2,6 +2,8 @@ import React from 'react'
 
 import styled from 'styled-components'
 
+import { Socials } from '../components/layout'
+
 const Foot = styled.footer`
     height: 56px;
     margin-bottom: 56px;
@@ -29,6 +31,7 @@ const Footer = () => {
         <Foot>
             <Wrapper>
                 Copyright 2019 Josh Drentlaw Web Design
+                <Socials />
             </Wrapper>
         </Foot>
     )
