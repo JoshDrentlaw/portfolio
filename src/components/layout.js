@@ -118,9 +118,9 @@ export const Socials = () => {
             <a href="https://www.facebook.com/jdwebdev" target="_blank" rel="noopener noreferrer">
                 <Facebook />
             </a>
-            <a href="#" target="_blank" rel="noopener noreferrer">
+            {/* <a href="#" target="_blank" rel="noopener noreferrer">
                 <Maps />
-            </a>
+            </a> */}
             <a href="https://www.yelp.com/biz/josh-drentlaw-web-design-riverside-2" target="_blank" rel="noopener noreferrer">
                 <Img fixed={data.file.childImageSharp.fixed} alt="Yelp company logo" />
             </a>
