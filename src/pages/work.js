@@ -15,7 +15,7 @@ const WorkContainer = styled(Container)`
 `
 
 const ImgContainer = styled.div`
-    width: 60%; height: 60%;
+    width: 60%;
 
     img {
         height: 100%;
@@ -32,6 +32,12 @@ const WorkItem = (props) => (
         <a href={props.url} target="_blank" rel="noopener noreferrer">
             <Img fluid={props.src} alt={props.alt} />
         </a>
+        {
+            props.blog ?
+            <a style={{ display: 'block', marginTop: '2em' }} href={props.blog}>Blog Post</a>
+            :
+            null
+        }
     </ImgContainer>
 )
 
@@ -72,12 +78,13 @@ const Work = () => {
     return (
         <Layout>
             <SEO title="Work" description="Josh Drentlaw's web design work using the amazingly powerful GatsbyJS and Netlify platforms." />
-            <WorkContainer style={{ marginTop: `0`, paddingTop: `0` }}>
+            <WorkContainer>
                 <WorkItem
                     alt="Penny House Weddings' website."
                     name="Penny House Weddings"
                     src={data.pennyhouseweddings.childImageSharp.fluid}
                     url="https://pennyhouseweddings.com"
+                    blog="/blog/penny-house-weddings"
                 />
             </WorkContainer>
             <WorkContainer>
