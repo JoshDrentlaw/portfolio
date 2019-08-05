@@ -19,9 +19,15 @@ const Heading = styled.h1`
     width: 100%;
 `
 
+const H2 = styled.h2`
+    font-size: 2.6em;
+    margin-top: 4em;
+    text-align: center;
+`
+
 const SubHeading = styled.p`
-    font-size: 2em;
-    margin: 4em 0;
+    font-size: calc(1.3em + (2 - 1.3) * (100vw - 300px) / (880 - 300));
+    margin: 2em 0 4em;
     text-align: center;
 `
 
@@ -97,28 +103,46 @@ const Index = () => {
                     "development",
                     "developer",
                     "web design",
+                    "web design services",
                     "web designer",
+                    "web designer services",
                     "web development",
+                    "web development services",
                     "web developer",
+                    "web developer services",
                     "riverside",
                     "riverside web design",
+                    "riverside web design services",
                     "riverside web designer",
+                    "riverside web designer services",
                     "riverside web development",
+                    "riverside web development services",
                     "riverside web developer",
+                    "riverside web developer services",
                     "gatsby",
+                    "gatsby services",
                     "gatsbyjs",
                     "netlify",
+                    "netlify services",
                     "static",
                     "site",
                     "static site",
+                    "static website",
+                    "static web site",
                     "web site",
                     "cheap web site",
                     "cheap web site riverside",
+                    "website",
+                    "cheap website",
+                    "cheap website riverside",
                     "cheap static site",
                     "cheap static site riverside",
+                    "cheap static website",
+                    "cheap static website riverside",
                     "wordpress",
                     "cheap wordpress",
                     "cheap wordpress site",
+                    "cheap wordpress website",
                     "graphic design",
                     "digital marketing"
                 ]}
@@ -135,7 +159,8 @@ const Index = () => {
                     <Heart />
                 </Logos>
             </Container>
-            <SubHeading>Welcome to Josh Drentlaw Web Design! My goal is build your company or non-profit organization a blazing fast static site that performs well and is accessible to everyone. Keep reading to learn a little bit about the technologies I use to accomplish my goal.</SubHeading>
+            <H2>The future is here!</H2>
+            <SubHeading>Welcome to Josh Drentlaw Web Design! My goal is build your company or non-profit organization a blazing fast static website. Today's landscape is litered with websites built on Wix, SquareSpace, and WordPress. These technologies are great, but they don't offer you a customized solution specifically for your business. Read below to learn about the technologies I use to give you the best website you've ever owned.</SubHeading>
             <Container margin="2em 0">
                 <div className="small">
                     <H3>What is GatsbyJS?</H3>
@@ -152,7 +177,7 @@ const Index = () => {
                     <dd>Does your data live in a WordPress site? Gatsby can source that data, giving you the ability to use the CMS your familiar with.</dd>
                 </DetailList>
                 <div className="small">
-                    <Button bgColor="rebeccapurple"><a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">Learn more</a></Button>
+                    <Button bgColor="rebeccapurple"><a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">Learn more about GatsbyJS</a></Button>
                 </div>
             </Container>
             <Container margin="2em 0">
@@ -171,7 +196,7 @@ const Index = () => {
                     <dd>With NetlifyCMS you can take full control of your site after it's built.</dd>
                 </DetailList>
                 <div className="small">
-                    <Button bgImage="linear-gradient(to bottom, #20c5b7, #4c9abe)"><a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Learn more</a></Button>
+                    <Button bgImage="linear-gradient(to bottom, #20c5b7, #4c9abe)"><a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Learn more about Netlify</a></Button>
                 </div>
             </Container>
             <SubHeading>An amazing website for your business is waiting just around the corner! Get in <a href="/contact/">contact</a> with me today!</SubHeading>
