@@ -8,6 +8,7 @@ import styled from 'styled-components'
 
 import Facebook from '../assets/svg/facebook.inline.svg'
 import Maps from '../assets/svg/maps.inline.svg'
+import Instagram from '../assets/svg/instagram.inline.svg'
 
 import Header from "./header"
 import Footer from './footer'
@@ -118,10 +119,13 @@ export const Socials = () => {
             <a href="https://www.facebook.com/jdwebdev" target="_blank" rel="noopener noreferrer">
                 <Facebook />
             </a>
-            {/* <a href="#" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.instagram.com/joshdrentlawwebdesign" target="_blank" rel="noopener noreferrer">
+                <Instagram />
+            </a>
+            <a href="https://g.page/jd-web-design" target="_blank" rel="noopener noreferrer">
                 <Maps />
-            </a> */}
-            <a href="https://www.yelp.com/biz/josh-drentlaw-web-design-riverside-2" target="_blank" rel="noopener noreferrer">
+            </a>
+            <a href="https://www.yelp.com/biz/josh-drentlaw-web-design-riverside-2" target="_blank" rel="noopener noreferrer" style={{ marginLeft: "-15px" }}>
                 <Img fixed={data.file.childImageSharp.fixed} alt="Yelp company logo" />
             </a>
         </SocialWrapper>
