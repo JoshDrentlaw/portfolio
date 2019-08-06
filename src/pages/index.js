@@ -149,7 +149,7 @@ const Index = () => {
             />
             <Container heightSm="calc(100vh - (2em + 56px))" heightLg="calc(100vh - (2em + 56px))" padding="2em 0 0">
                 <Heading>
-                    Get a powerful static site with GatsbyJS and Netlify.
+                    Get a powerful website with GatsbyJS and Netlify.
                 </Heading>
                 <Logos>
                     <Gatsby />
@@ -159,9 +159,9 @@ const Index = () => {
                     <Heart />
                 </Logos>
             </Container>
-            <H2>The future is here!</H2>
-            <SubHeading>Welcome to Josh Drentlaw Web Design! My goal is build your company or non-profit organization a blazing fast static website. Today's landscape is litered with websites built on Wix, SquareSpace, and WordPress. These technologies are great, but they don't offer you a customized solution specifically for your business. Read below to learn about the technologies I use to give you the best website you've ever owned.</SubHeading>
-            <Container margin="2em 0">
+            <H2>Why use Josh Drentlaw Web Design?</H2>
+            <SubHeading>My goal is to build your company or non-profit organization a blazing fast static website. Today's landscape is littered with websites built on Wix, SquareSpace, and WordPress. These technologies are great, but they don't offer you a customized solution specifically for your business. As a web designer and developer, I can provide you with customized SEO, advertising, and promotional solutions that will help you maximize the reach of your business. Do not wait and do not hesitate! Let's get started on your new website today!</SubHeading>
+            <Container margin="4em 0">
                 <div className="small">
                     <H3>What is GatsbyJS?</H3>
                     <Gatsby style={{ height: `180px`}} />
@@ -180,7 +180,7 @@ const Index = () => {
                     <Button bgColor="rebeccapurple"><a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">Learn more about GatsbyJS</a></Button>
                 </div>
             </Container>
-            <Container margin="2em 0">
+            <Container margin="4em 0">
                 <div className="small">
                     <H3>What is Netlify?</H3>
                     <Netlify style={{ height: `180px`}} />
