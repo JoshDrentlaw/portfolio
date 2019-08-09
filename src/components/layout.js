@@ -18,14 +18,14 @@ const Body = styled.div`
     color: white;
     font-family: sans-serif;
     min-height: 100vh;
-    overflow: auto;
+    overflow: hidden;
 `
 
 const Main = styled.main`
     box-sizing: border-box;
     height: 100%;
-    min-height: calc(100vh - 112px);
-    margin: 0 auto;
+    min-height: calc(100vh - 156px);
+    margin: 0 auto 40px;
     padding: 0 2em;
     width: 100%;
 
@@ -94,6 +94,10 @@ const SocialWrapper = styled.div`
     display: flex;
     align-items: center;
     justify-content: space-evenly;
+
+    a {
+        padding: 12px;
+    }
 
     svg {
         color: white;
