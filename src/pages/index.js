@@ -199,7 +199,7 @@ const Index = () => {
                     <Button bgImage="linear-gradient(to bottom, #20c5b7, #4c9abe)"><a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Learn more about Netlify</a></Button>
                 </div>
             </Container>
-            <SubHeading>An amazing website for your business is waiting just around the corner! Get in <a href="/contact/">contact</a> with me today!</SubHeading>
+            <SubHeading>The internet is one of the most valuable resources for any business, but there are so many businesses out there, it can be hard to break through. You need someone in your corner that can help break through. Having a website is part of the battle, but knowing how to promote it and reach the people you want to reach is another battle entirely. These technologies provide a ground structure to get any sort of site you need off the ground. Need a blog? An ecommerce site? A portfolio? Gatsby provides an amazing framework to get any of these sites of the ground, and gives you and I the time we need to strategize and create a stellar design. I hope you decide to <a href="/contact/">get in touch with me</a>. I have a feeling we're going to create something amazing together.</SubHeading>
         </Layout>
     )
 }
