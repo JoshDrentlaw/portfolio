@@ -34,7 +34,7 @@ const WorkItem = (props) => (
         </a>
         {
             props.blog ?
-            <a style={{ display: 'block', marginTop: '2em' }} href={props.blog}>Blog Post</a>
+            <a style={{ display: 'block', marginTop: '2em' }} href={`/blog/${props.blog}`}>Blog Post</a>
             :
             null
         }
@@ -77,14 +77,14 @@ const Work = () => {
 
     return (
         <Layout>
-            <SEO title="Work" description="Josh Drentlaw's web design work using the amazingly powerful GatsbyJS and Netlify platforms." />
+            <SEO title="Work" description="It iew Josh Drentlaw's web design work here." />
             <WorkContainer>
                 <WorkItem
                     alt="Penny House Weddings' website."
                     name="Penny House Weddings"
                     src={data.pennyhouseweddings.childImageSharp.fluid}
                     url="https://pennyhouseweddings.com"
-                    blog="/blog/penny-house-weddings"
+                    blog="penny-house-weddings"
                 />
             </WorkContainer>
             <WorkContainer>
@@ -93,6 +93,7 @@ const Work = () => {
                     name="United Pool Service"
                     src={data.unitedpoolservice.childImageSharp.fluid}
                     url="https://www.unitedpoolservice.com"
+                    blog="united-pool-service"
                 />
             </WorkContainer>
             <h2 style={{ textAlign: "center", textDecoration: "underline", marginTop: "4em"}}>Coming Soon</h2>
