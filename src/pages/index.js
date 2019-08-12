@@ -1,14 +1,11 @@
 import React from 'react'
 import SEO from "../components/seo"
+import { useStaticQuery, graphql } from 'gatsby'
+import Img from 'gatsby-image'
 
 import styled from 'styled-components'
 
 import Layout, { Container } from '../components/layout'
-
-import OldComputer from '../assets/svg/oldComputer.inline.svg'
-import Designing from '../assets/svg/designing.inline.svg'
-import Styling from '../assets/svg/styling.inline.svg'
-import Coding from '../assets/svg/coding.inline.svg'
 
 const Heading = styled.h1`
     display: inline-flex;
@@ -37,7 +34,7 @@ const BlockText = styled.p`
     text-align: ${props => props.align || 'center'};
 `
 
-const TitleSvg = styled.div`
+const TitleImg = styled.div`
     align-items: center;
     display: flex;
     height: 200px;
@@ -49,28 +46,28 @@ const TitleSvg = styled.div`
         margin: 0.4em;
     }
 
-    svg {
+    .gatsby-image-wrapper {
         width: 100%;
-        height: 100%;
+        height: 200px;
     }
 
     @media(min-width: 1024px) {
         height: 40%;
 
-        svg {
-            width: 80%;
-            height: 80%;
+        .gatsby-image-wrapper {
+            width: 500px;
+            height: 200px;
         }
     }
 `
 
-const SvgImg = styled.figure`
+const ImgContainer = styled.figure`
     width: 100%;
     height: 400px;
 
-    svg {
+    .gatsby-image-wrapper {
         width: 100%;
-        height: 100%;
+        height: auto;
     }
 `
 
@@ -101,6 +98,32 @@ const Button = styled.button`
 `
 
 const Index = () => {
+    const data = useStaticQuery(graphql`
+    {
+        oldComputer: file(relativePath: {eq: "designAssets/oldComputer.png"}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+        designing: file(relativePath: {eq: "designAssets/designing.png"}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+        styling: file(relativePath: {eq: "designAssets/styling.png"}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
+    }
+    `)
+
     return (
         <Layout>
             <SEO
@@ -165,18 +188,18 @@ const Index = () => {
                 heightLg="calc(100vh - (2em + 56px))"
                 padding="2em 0 0"
             >
-                <TitleSvg>
-                    <OldComputer />
-                </TitleSvg>
+                <TitleImg>
+                    <Img fluid={data.oldComputer.childImageSharp.fluid} alt="Old computer from the 90's." />
+                </TitleImg>
                 <Heading>
                     Is your website stuck in 1999?<br />
                     Maybe it could use an update...
                 </Heading>
             </Container>
             <Container>
-                <SvgImg>
-                    <Designing />
-                </SvgImg>
+                <ImgContainer>
+                    <Img fluid={data.designing.childImageSharp.fluid} alt="Design tools." />
+                </ImgContainer>
                 <BlockText align="left">
                     Getting your business off the ground is hard. There's a million things to manage including meetings, investors, products. The list goes on and on. One thing you probably don't have time to become an expert in, at least not overnight, is building and maintaining a website.
                     <DetailList>
@@ -189,18 +212,18 @@ const Index = () => {
             </Container>
             <Container>
                 <BlockText align="left">
-                    Design is a key aspect to any website, but knowing how to tailor your design to your audience is critical. People make snap judgements that can be hard to come back from, so you want to make sure you're making a stellar first immpression. 
+                    Design is a key aspect to any website, but knowing how to tailor your design to your audience is critical. People make snap judgements that can be hard to come back from, so you want to make sure you're making a stellar first immpression.
                 </BlockText>
-                <SvgImg>
-                    <Styling />
-                </SvgImg>
+                <ImgContainer>
+                <Img fluid={data.styling.childImageSharp.fluid} alt="Styling tools." />
+                </ImgContainer>
             </Container>
             <Container>
-                <SvgImg>
-                    <Coding />
-                </SvgImg>
+                <ImgContainer>
+
+                </ImgContainer>
                 <BlockText align="left">
-                    When 
+                    When
                 </BlockText>
             </Container>
         </Layout>
