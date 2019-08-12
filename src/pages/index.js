@@ -5,17 +5,19 @@ import styled from 'styled-components'
 
 import Layout, { Container } from '../components/layout'
 
-import Gatsby from '../assets/svg/gatsbyjs-icon.inline.svg'
-import Netlify from '../assets/svg/netlify-icon.inline.svg'
-import Heart from '../assets/svg/heart.inline.svg'
+import OldComputer from '../assets/svg/oldComputer.inline.svg'
+import Designing from '../assets/svg/designing.inline.svg'
+import Styling from '../assets/svg/styling.inline.svg'
+import Coding from '../assets/svg/coding.inline.svg'
 
 const Heading = styled.h1`
     display: inline-flex;
     flex-direction: column;
-    font-size: calc(40pt + (65 - 40) * (100vw - 300px) / (880 - 300));
-    justify-content: start;
+    font-size: calc(40px + (50 - 40) * (100vw - 300px) / (880 - 300));
+    justify-content: center;
     line-height: calc(1em + (1.2 - 1.1) * (100vw - 300px) / (880 - 300));
     margin: 0;
+    text-align: center;
     width: 100%;
 `
 
@@ -25,21 +27,21 @@ const H2 = styled.h2`
     text-align: center;
 `
 
-const SubHeading = styled.p`
-    font-size: calc(1.3em + (2 - 1.3) * (100vw - 300px) / (880 - 300));
-    margin: 2em 0 4em;
-    text-align: center;
-`
-
 const H3 = styled.h3`
     font-size: 2em;
 `
 
-const Logos = styled.div`
+const BlockText = styled.p`
+    font-size: calc(1.3em + (2 - 1.3) * (100vw - 300px) / (880 - 300));
+    margin: 2em 0 4em;
+    text-align: ${props => props.align || 'center'};
+`
+
+const TitleSvg = styled.div`
     align-items: center;
     display: flex;
-    height: 100px;
-    justify-content: space-around;
+    height: 200px;
+    justify-content: center;
     width: 100%;
 
     span {
@@ -48,18 +50,27 @@ const Logos = styled.div`
     }
 
     svg {
-        width: 200px;
-        height: 100px;
+        width: 100%;
+        height: 100%;
     }
 
     @media(min-width: 1024px) {
-        flex-direction: column;
-        height: calc(100% - 2em);
-        width: 200px;
+        height: 40%;
 
         svg {
-            height: 200px;
+            width: 80%;
+            height: 80%;
         }
+    }
+`
+
+const SvgImg = styled.figure`
+    width: 100%;
+    height: 400px;
+
+    svg {
+        width: 100%;
+        height: 100%;
     }
 `
 
@@ -67,11 +78,12 @@ const DetailList = styled.dl`
     margin: 2em 0;
 
     dt {
-        font-size: 1.3em;
+        font-size: 25px;
         margin: 0.7em 0 0.5em;
     }
 
     dd {
+        font-size: 18px;
         margin-left: 0;
     }
 `
@@ -93,7 +105,7 @@ const Index = () => {
         <Layout>
             <SEO
                 title="Home"
-                description="Get a blazing fast static site for your small business or non-profit from Josh Drentlaw Web Design using GatsbyJS and Netlify."
+                description="Get a blazing fast website for your hobby, small business, or non-profit from Josh Drentlaw Web Design."
                 keywords={[
                     "josh",
                     "drentlaw",
@@ -147,59 +159,50 @@ const Index = () => {
                     "digital marketing"
                 ]}
             />
-            <Container heightSm="calc(100vh - (2em + 56px))" heightLg="calc(100vh - (2em + 56px))" padding="2em 0 0">
+            <Container
+                flexDirLg="column"
+                heightSm="calc(100vh - (2em + 56px))"
+                heightLg="calc(100vh - (2em + 56px))"
+                padding="2em 0 0"
+            >
+                <TitleSvg>
+                    <OldComputer />
+                </TitleSvg>
                 <Heading>
-                    Get a powerful website with GatsbyJS and Netlify.
+                    Is your website stuck in 1999?<br />
+                    Maybe it could use an update...
                 </Heading>
-                <Logos>
-                    <Gatsby />
-                    <span>&#43;</span>
-                    <Netlify />
-                    <span>&#61;</span>
-                    <Heart />
-                </Logos>
             </Container>
-            <H2>Why use Josh Drentlaw Web Design?</H2>
-            <SubHeading>My goal is to build your company or non-profit organization a blazing fast static website. Today's landscape is littered with websites built on Wix, SquareSpace, and WordPress. These technologies are great, but they don't offer you a customized solution specifically for your business. As a web designer and developer, I can provide you with customized SEO, advertising, and promotional solutions that will help you maximize the reach of your business. Do not wait and do not hesitate! Let's get started on your new website today!</SubHeading>
-            <Container margin="4em 0">
-                <div className="small">
-                    <H3>What is GatsbyJS?</H3>
-                    <Gatsby style={{ height: `180px`}} />
-                </div>
-                <DetailList className="large">
-                    <dt>Powerful Static Sites</dt>
-                    <dd>GatsbyJS is a web framework that makes creating static websites extremely simple.</dd>
-                    <dt>Performance and Enhancements</dt>
-                    <dd>GatsbyJS static sites are hyper-fast and easy to upgrade and expand.</dd>
-                    <dt>Data</dt>
-                    <dd>GatsbyJS offers hundreds of plugins that allow you to source content and data from just about anywhere.</dd>
-                    <dt>Integrate with WordPress</dt>
-                    <dd>Does your data live in a WordPress site? Gatsby can source that data, giving you the ability to use the CMS your familiar with.</dd>
-                </DetailList>
-                <div className="small">
-                    <Button bgColor="rebeccapurple"><a href="https://gatsbyjs.org" target="_blank" rel="noopener noreferrer">Learn more about GatsbyJS</a></Button>
-                </div>
+            <Container>
+                <SvgImg>
+                    <Designing />
+                </SvgImg>
+                <BlockText align="left">
+                    Getting your business off the ground is hard. There's a million things to manage including meetings, investors, products. The list goes on and on. One thing you probably don't have time to become an expert in, at least not overnight, is building and maintaining a website.
+                    <DetailList>
+                        <dt>More than just design.</dt>
+                        <dd>When you hire me to build your website, your not just getting a nice design, your getting my design expertise.</dd>
+                        <dt>Personalized strategy.</dt>
+                        <dd>One size does not fit all, especially in business. Your business has specific needs, I can give you specialized solutions.</dd>
+                    </DetailList>
+                </BlockText>
             </Container>
-            <Container margin="4em 0">
-                <div className="small">
-                    <H3>What is Netlify?</H3>
-                    <Netlify style={{ height: `180px`}} />
-                </div>
-                <DetailList className="large">
-                    <dt>Hosting</dt>
-                    <dd>Netlify is a web hosting platform with a powerful free tier and competitive pricing options.</dd>
-                    <dt>Continuous Deployment</dt>
-                    <dd>Netlify makes it fast and easy to deploy changes to your website.</dd>
-                    <dt>Super Simple Forms</dt>
-                    <dd>Netlify allows you to add fully functional forms in minutes.</dd>
-                    <dt>Content Management</dt>
-                    <dd>With NetlifyCMS you can take full control of your site after it's built.</dd>
-                </DetailList>
-                <div className="small">
-                    <Button bgImage="linear-gradient(to bottom, #20c5b7, #4c9abe)"><a href="https://netlify.com" target="_blank" rel="noopener noreferrer">Learn more about Netlify</a></Button>
-                </div>
+            <Container>
+                <BlockText align="left">
+                    Design is a key aspect to any website, but knowing how to tailor your design to your audience is critical. People make snap judgements that can be hard to come back from, so you want to make sure you're making a stellar first immpression. 
+                </BlockText>
+                <SvgImg>
+                    <Styling />
+                </SvgImg>
             </Container>
-            <SubHeading>The internet is one of the most valuable resources for any business, but there are so many businesses out there, it can be hard to break through. You need someone in your corner that can help break through. Having a website is part of the battle, but knowing how to promote it and reach the people you want to reach is another battle entirely. These technologies provide a ground structure to get any sort of site you need off the ground. Need a blog? An ecommerce site? A portfolio? Gatsby provides an amazing framework to get any of these sites of the ground, and gives you and I the time we need to strategize and create a stellar design. I hope you decide to <a href="/contact/">get in touch with me</a>. I have a feeling we're going to create something amazing together.</SubHeading>
+            <Container>
+                <SvgImg>
+                    <Coding />
+                </SvgImg>
+                <BlockText align="left">
+                    When 
+                </BlockText>
+            </Container>
         </Layout>
     )
 }

@@ -29,26 +29,6 @@ const Main = styled.main`
     padding: 0 2em;
     width: 100%;
 
-    @media(min-width: 1024px) {
-        width: 65%;
-        padding: 2em;
-    }
-
-    @media(min-Width: 1680px) {
-        width: 50%;
-    }
-`
-
-export const Container = styled.section`
-    align-items: center;
-    display: flex;
-    height: ${props => props.heightSm || 'auto'};
-    flex-direction: ${props => props.flexDirSm || 'column'};
-    justify-content: center;
-    margin: ${props => props.margin || '0'};
-    padding: ${props => props.padding || '0'};
-    width: 100%;
-
     a {
         color: white;
         font-weight: 700;
@@ -63,29 +43,25 @@ export const Container = styled.section`
         }
     }
 
-    .small, .large {
-        text-align: center;
-        width: 100%;
+    @media(min-width: 1024px) {
+        width: 65%;
+        padding: 2em;
     }
+`
+
+export const Container = styled.section`
+    align-items: center;
+    display: flex;
+    height: ${props => props.heightSm || 'auto'};
+    flex-direction: ${props => props.flexDirSm || 'column'};
+    justify-content: space-evenly;
+    margin: ${props => props.margin || '0'};
+    padding: ${props => props.padding || '0'};
+    width: 100%;
 
     @media(min-width: 1024px) {
         flex-direction: ${props => props.flexDirLg || 'row'};
-        height: ${props => props.heightLg || '40vh'};
-        justify-content: ${props => props.justifyLg || 'center'};
-
-        .small {
-            text-align: left;
-            width: 35%;
-        }
-
-        .large {
-            text-align: left;
-            width: 50%;
-        }
-
-        button {
-            margin-left: 50px;
-        }
+        height: ${props => props.heightLg || 'auto'};
     }
 `
 
