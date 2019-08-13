@@ -10,7 +10,7 @@ import Layout, { Container } from '../components/layout'
 const Heading = styled.h1`
     display: inline-flex;
     flex-direction: column;
-    font-size: calc(40px + (50 - 40) * (100vw - 300px) / (880 - 300));
+    font-size: calc(35px + (50 - 35) * (100vw - 300px) / (880 - 300));
     justify-content: center;
     line-height: calc(1em + (1.2 - 1.1) * (100vw - 300px) / (880 - 300));
     margin: 0;
@@ -34,21 +34,19 @@ const BlockText = styled.p`
     text-align: ${props => props.align || 'center'};
 `
 
-const TitleImg = styled.div`
+const TitleImg = styled.figure`
     align-items: center;
     display: flex;
-    height: 200px;
+    height: auto;
+    min-height: 125px;
+    max-height: 400px;
     justify-content: center;
     width: 100%;
-
-    span {
-        font-size: 3em;
-        margin: 0.4em;
-    }
+    margin: 1em 0;
 
     .gatsby-image-wrapper {
         width: 100%;
-        height: 200px;
+        height: 100%;
     }
 
     @media(min-width: 1024px) {
@@ -63,11 +61,19 @@ const TitleImg = styled.div`
 
 const ImgContainer = styled.figure`
     width: 100%;
-    height: 400px;
+    max-width: 400px;
+    height: auto;
+    min-height: 150px;
+    max-height: 400px;
+    margin: 0.5em 0;
 
     .gatsby-image-wrapper {
         width: 100%;
         height: auto;
+    }
+
+    @media(min-width: 1024px) {
+        margin: 1em 40px;
     }
 `
 
@@ -191,15 +197,15 @@ const Index = () => {
             />
             <Container
                 flexDirLg="column"
-                heightSm="calc(100vh - (2em + 56px))"
-                heightLg="calc(100vh - (2em + 56px))"
+                heightSm="calc(100vh - 56px)"
+                heightLg="calc(100vh - 56px)"
                 padding="2em 0 0"
             >
-                <TitleImg>
-                    <Img fluid={data.oldComputer.childImageSharp.fluid} alt="Old computer from the 90's." />
-                </TitleImg>
                 <Heading>
-                    Is your website stuck in 1999?<br />
+                    Is your website stuck in 1999?
+                    <TitleImg>
+                        <Img fluid={data.oldComputer.childImageSharp.fluid} alt="Old computer from the 90's." />
+                    </TitleImg>
                     Maybe it could use an update...
                 </Heading>
             </Container>
@@ -217,7 +223,7 @@ const Index = () => {
                     </DetailList>
                 </BlockText>
             </Container>
-            <Container>
+            <Container flexDirSm="column-reverse">
                 <BlockText align="left">
                     Design is a key aspect to any website, but knowing how to tailor your design to your audience is critical. People make snap judgements that can be hard to come back from, so you want to make sure you're making a stellar first immpression.
                     <DetailList>

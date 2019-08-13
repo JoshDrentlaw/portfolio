@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const Nav = styled.nav`
-    background-color: rgba(0,0,0,0.9);
+    background-color: #000;
     bottom: 0;
     height: 56px;
     position: fixed;
