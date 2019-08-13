@@ -19,8 +19,8 @@ const Heading = styled.h1`
 `
 
 const H2 = styled.h2`
-    font-size: 2.6em;
-    margin-top: 4em;
+    font-size: calc(35px + (50 - 35) * (100vw - 300px) / (880 - 300));
+    margin: 0.25em 0;
     text-align: center;
 `
 
@@ -199,14 +199,12 @@ const Index = () => {
                 flexDirLg="column"
                 heightSm="calc(100vh - 56px)"
                 heightLg="calc(100vh - 56px)"
-                padding="2em 0 0"
             >
+                <TitleImg>
+                    <Img fluid={data.oldComputer.childImageSharp.fluid} alt="Old computer from the 90's." />
+                </TitleImg>
                 <Heading>
-                    Is your website stuck in 1999?
-                    <TitleImg>
-                        <Img fluid={data.oldComputer.childImageSharp.fluid} alt="Old computer from the 90's." />
-                    </TitleImg>
-                    Maybe it could use an update...
+                    Is your website feeling old and outdated?<br /><br />It's time for something new and fresh!
                 </Heading>
             </Container>
             <Container>
