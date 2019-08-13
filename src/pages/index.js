@@ -1,6 +1,6 @@
 import React from 'react'
 import SEO from "../components/seo"
-import { useStaticQuery, graphql } from 'gatsby'
+import { useStaticQuery, graphql, Link } from 'gatsby'
 import Img from 'gatsby-image'
 
 import styled from 'styled-components'
@@ -121,6 +121,13 @@ const Index = () => {
                 }
             }
         }
+        coding: file(relativePath: {eq: "designAssets/coding.png"}) {
+            childImageSharp {
+                fluid {
+                    ...GatsbyImageSharpFluid
+                }
+            }
+        }
     }
     `)
 
@@ -203,29 +210,44 @@ const Index = () => {
                 <BlockText align="left">
                     Getting your business off the ground is hard. There's a million things to manage including meetings, investors, products. The list goes on and on. One thing you probably don't have time to become an expert in, at least not overnight, is building and maintaining a website.
                     <DetailList>
-                        <dt>More than just design.</dt>
-                        <dd>When you hire me to build your website, your not just getting a nice design, your getting my design expertise.</dd>
+                        <dt>Confidence and expertise</dt>
+                        <dd>While you focus on your business, you can rest easy knowing that I understand the ever changing internet landscape.</dd>
                         <dt>Personalized strategy.</dt>
-                        <dd>One size does not fit all, especially in business. Your business has specific needs, I can give you specialized solutions.</dd>
+                        <dd>One size does not fit all, especially in business. Your business has specific needs, I can give you specialized SEO, marketing, and design solutions.</dd>
                     </DetailList>
                 </BlockText>
             </Container>
             <Container>
                 <BlockText align="left">
                     Design is a key aspect to any website, but knowing how to tailor your design to your audience is critical. People make snap judgements that can be hard to come back from, so you want to make sure you're making a stellar first immpression.
+                    <DetailList>
+                        <dt>More than just design.</dt>
+                        <dd>When you hire me to build your website, your not just getting a nice design, your getting my design expertise.</dd>
+                        <dt>Modern and meaningful</dt>
+                        <dd>You need a website that looks like it lives in the current decade. You need not worry about getting an old tired design from Josh Drentlaw Web Design.</dd>
+                    </DetailList>
                 </BlockText>
                 <ImgContainer>
-                <Img fluid={data.styling.childImageSharp.fluid} alt="Styling tools." />
+                    <Img fluid={data.styling.childImageSharp.fluid} alt="Styling tools." />
                 </ImgContainer>
             </Container>
             <Container>
                 <ImgContainer>
-
+                    <Img fluid={data.coding.childImageSharp.fluid} alt="Screen with code on it." />
                 </ImgContainer>
                 <BlockText align="left">
-                    When
+                    Whether it's WordPress, Wix, or a custom built website, coding comes up at some point. Trust that the technical aspects of your website are in good hands.
+                    <DetailList>
+                        <dt>Infinite posibilities</dt>
+                        <dd>Anything that your site might need is within reach. In the end your website should function exactly as you imagine.</dd>
+                        <dt>From coding to hosting</dt>
+                        <dd>Whatever your needs or budget, there is a hosting platform for you, and I will help you determine what will give you the most bang for your buck.</dd>
+                    </DetailList>
                 </BlockText>
             </Container>
+            <BlockText>
+                Now is the best time to get started on your website, so please do not hesitate, and <Link to="/contact/">get in contact with me today</Link>!
+            </BlockText>
         </Layout>
     )
 }
