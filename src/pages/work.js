@@ -15,7 +15,11 @@ const WorkContainer = styled(Container)`
 `
 
 const ImgContainer = styled.div`
-    width: 60%;
+    width: 100%;
+
+    @media(min-width: 1024px) {
+        width: 60%;
+    }
 
     img {
         height: 100%;

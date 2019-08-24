@@ -42,7 +42,7 @@ const TitleImg = styled.figure`
     max-height: 400px;
     justify-content: center;
     width: 100%;
-    margin: 1em 0;
+    margin: 0;
 
     .gatsby-image-wrapper {
         width: 100%;
@@ -143,62 +143,14 @@ const Index = () => {
                 title="Home"
                 description="Get a blazing fast website for your hobby, small business, or non-profit from Josh Drentlaw Web Design."
                 keywords={[
-                    "josh",
-                    "drentlaw",
-                    "josh drentlaw",
-                    "web",
-                    "design",
-                    "development",
-                    "developer",
-                    "web design",
-                    "web design services",
-                    "web designer",
-                    "web designer services",
-                    "web development",
-                    "web development services",
-                    "web developer",
-                    "web developer services",
-                    "riverside",
-                    "riverside web design",
-                    "riverside web design services",
-                    "riverside web designer",
-                    "riverside web designer services",
-                    "riverside web development",
-                    "riverside web development services",
-                    "riverside web developer",
-                    "riverside web developer services",
-                    "gatsby",
-                    "gatsby services",
-                    "gatsbyjs",
-                    "netlify",
-                    "netlify services",
-                    "static",
-                    "site",
-                    "static site",
-                    "static website",
-                    "static web site",
-                    "web site",
-                    "cheap web site",
-                    "cheap web site riverside",
-                    "website",
-                    "cheap website",
-                    "cheap website riverside",
-                    "cheap static site",
-                    "cheap static site riverside",
-                    "cheap static website",
-                    "cheap static website riverside",
-                    "wordpress",
-                    "cheap wordpress",
-                    "cheap wordpress site",
-                    "cheap wordpress website",
-                    "graphic design",
-                    "digital marketing"
+                    
                 ]}
             />
             <Container
                 flexDirLg="column"
                 heightSm="calc(100vh - 56px)"
-                heightLg="calc(100vh - 56px)"
+                heightLg="calc(100vh - (56px + 2em))"
+                margin="0 0 8em"
             >
                 <TitleImg>
                     <Img fluid={data.oldComputer.childImageSharp.fluid} alt="Old computer from the 90's." />
