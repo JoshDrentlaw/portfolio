@@ -50,7 +50,6 @@ const TitleImg = styled.figure`
     }
 
     @media(min-width: 1024px) {
-        height: 40%;
 
         .gatsby-image-wrapper {
             width: 500px;
