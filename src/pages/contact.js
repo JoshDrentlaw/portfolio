@@ -118,7 +118,7 @@ const FormInput = (props) => (
 )
 
 const FormSelect = (props) => {
-    const budget = props.budget;
+    const list = props.list;
 
     return (
         
@@ -128,7 +128,7 @@ const FormSelect = (props) => {
                     <option value="" disable="true" style={{ display: 'none' }}>{props.placeholder}</option>
                     <option value="Blank"></option>
                     {
-                        budget.map((item, i) => {
+                        list.map((item, i) => {
                             return <option key={i + (100 * Math.random())} value={item}>{item}</option>
                         })
                     }
@@ -144,6 +144,13 @@ const Contact = () => {
         "$5000-$10000",
         "$10000+"
     ]
+
+    const services = [
+        "Updates & Repairs",
+        "Static Website",
+        "Dynamic Website",
+        "SEO, Marketing, Advertising"
+    ]
     
     return (
         <Layout>
@@ -156,9 +163,14 @@ const Contact = () => {
                     <FormInput type="text" name="name" placeholder="Full Name" />
                     <FormInput type="email" name="email" placeholder="Email" />
                     <FormSelect
+                        name="service"
+                        placeholder="Choose a service"
+                        list={services}
+                    />
+                    <FormSelect
                         name="budget"
                         placeholder="Expected Budget"
-                        budget={budget}
+                        list={budget}
                     />
                     <textarea name="desc" className="tarea" rows="4" placeholder="Short desc of job..."></textarea>
                     <button className="button" type="submit">Submit</button>
