@@ -19,9 +19,9 @@ const ServiceContainer = styled.dl`
     margin: 4em 0;
 
     dt {
-        font-size: 2em;
+        font-size: 2.5em;
+        font-weight: 900;
         margin-bottom: 0.75em;
-        text-decoration: underline;
     }
 
     dd {
