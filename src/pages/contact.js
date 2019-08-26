@@ -159,7 +159,7 @@ const Contact = (props) => {
         "SEO, Marketing, Advertising"
     ]
 
-    const service = props.location.state.service
+    const service = props.location.state.service || 0;
     
     return (
         <Layout>
