@@ -205,7 +205,7 @@ const Index = () => {
                 </BlockText>
             </Container>
             <BlockText>
-                Now is the best time to get started on your website. Check out the <Link to="/services/">list of the services I offer</Link> and <Link to="/contact/">get in contact with me</Link> today!
+                Now is the best time to get started on your website. Check out the <Link to="/services/">list of services I offer</Link> and <Link to="/contact/">get in touch with me</Link> today!
             </BlockText>
         </Layout>
     )
