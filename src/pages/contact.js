@@ -129,14 +129,27 @@ const FormSelect = (props) => {
                     <option value="Blank"></option>
                     {
                         list.map((item, i) => {
-                            return (
-                                <option
-                                    key={i + (100 * Math.random())}
-                                    value={item}
-                                >
-                                    {item}
-                                </option>
-                            )
+                            if (i == props.selection) {
+                                return (
+                                    <option
+                                        key={i + (100 * Math.random())}
+                                        value={item}
+                                        selected
+                                    >
+                                        {item}
+                                    </option>
+                                )
+                            }
+                            else {
+                                return (
+                                    <option
+                                        key={i + (100 * Math.random())}
+                                        value={item}
+                                    >
+                                        {item}
+                                    </option>
+                                )
+                            }
                         })
                     }
                 </select>
@@ -159,7 +172,7 @@ const Contact = (props) => {
         "SEO, Marketing, Advertising"
     ]
 
-    const service = props.location.state.service || 0;
+    const service = props.location.state.service || undefined;
     
     return (
         <Layout>
