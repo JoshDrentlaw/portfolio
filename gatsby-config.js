@@ -15,13 +15,6 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: 'blog',
-        path: `${__dirname}/blog/`,
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
         path: `${__dirname}/src/assets/`,
       },
     },
@@ -31,10 +24,8 @@ module.exports = {
         path: `${__dirname}/src/images/`,
       },
     },
-    `gatsby-transformer-remark`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    'gatsby-plugin-postcss',
     {
       resolve: `gatsby-source-sanity`,
       options: {
@@ -57,17 +48,6 @@ module.exports = {
       },
     },
     'gatsby-plugin-styled-components',
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['']
-        },
-        custom: {
-          families: ['']
-        }
-      }
-    },
     {
       resolve: "gatsby-plugin-react-svg",
       options: {
