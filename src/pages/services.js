@@ -45,6 +45,14 @@ const Services = () => {
                             <dd>These services can oftentimes be inexpensive, so don't sweat it if you need a quick fix.</dd>
                         </ServiceContainer>
                     </li>
+                    <li id="design">
+                        <ServiceContainer>
+                            <dt>Website Design</dt>
+                            <dd>Before we can build your website, we need to talk about what it should look like, and what it's purpose will be.</dd>
+                            <dd>Once we have a design in place, we can begin the build process, and bring your design to life.</dd>
+                            <dd>I include the cost of the design in the cost of the website.</dd>
+                        </ServiceContainer>
+                    </li>
                     <li id="static">
                         <ServiceContainer>
                             <dt>Static Website</dt>

@@ -18,16 +18,6 @@ const Heading = styled.h1`
     width: 100%;
 `
 
-const H2 = styled.h2`
-    font-size: calc(35px + (50 - 35) * (100vw - 300px) / (880 - 300));
-    margin: 0.25em 0;
-    text-align: center;
-`
-
-const H3 = styled.h3`
-    font-size: 2em;
-`
-
 const BlockText = styled.p`
     font-size: calc(1.3em + (2 - 1.3) * (100vw - 300px) / (880 - 300));
     margin: 2em 0 4em;
@@ -91,14 +81,21 @@ const DetailList = styled.dl`
 `
 
 const Button = styled.button`
-    background-color: ${props => props.bgColor || "default"};
-    background-image: ${props => props.bgImage || "none"};
-    border: none;
+    background-color: #00000000;
+    border: 2px solid white;
     border-radius: 5px;
-    padding: 1.5em;
+    width: 230px; height: 70px;
+
+    &:hover {
+        background-color: white;
+    }
 
     a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-decoration: none;
+        width: 100%; height: 100%;
     }
 `
 
@@ -166,10 +163,11 @@ const Index = () => {
                     Getting your business off the ground is hard. There's a million things to manage including meetings, investors, products. The list goes on and on. One thing you don't have time to become an expert in overnight is building and maintaining a website.
                     <DetailList>
                         <dt>Confidence and expertise</dt>
-                        <dd>You can rest easy knowing that I understand the ever changing internet landscape.</dd>
+                        <dd>You can rest assured knowing that you're in good hands. I have the expertise that will help launch your website and business into outer space.</dd>
                         <dt>Personalized strategy.</dt>
                         <dd>One size does not fit all, especially in business. I can give you specialized SEO, marketing, and design solutions.</dd>
                     </DetailList>
+                    <Button><Link to="/services/#seo">Check out my SEO services</Link></Button>
                 </BlockText>
             </Container>
             <Container flexDirSm="column-reverse">
@@ -181,6 +179,9 @@ const Index = () => {
                         <dt>Modern and meaningful</dt>
                         <dd>You need a website that looks like it lives in the current decade. You don't have to worry about getting an old tired design from Josh Drentlaw Web Design.</dd>
                     </DetailList>
+                    <Button>
+                        <Link to="/services/#design">Check out my design services</Link>
+                    </Button>
                 </BlockText>
                 <ImgContainer>
                     <Img fluid={data.styling.childImageSharp.fluid} alt="Styling tools." />
@@ -198,10 +199,13 @@ const Index = () => {
                         <dt>From coding to hosting</dt>
                         <dd>Whatever your needs or budget, there is a hosting platform for you. I can help you determine what will give you the most bang for your buck.</dd>
                     </DetailList>
+                    <Button>
+                        <Link to="/services/#static">Check out my website services</Link>
+                    </Button>
                 </BlockText>
             </Container>
             <BlockText>
-                Now is the best time to get started on your website, so please do not hesitate, and <Link to="/contact/">get in contact with me today</Link>!
+                Now is the best time to get started on your website. Check out the <Link to="/services/">list of the services I offer</Link> and <Link to="/contact/">get in contact with me</Link> today!
             </BlockText>
         </Layout>
     )
