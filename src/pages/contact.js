@@ -1,5 +1,6 @@
 import React from 'react'
 import SEO from "../components/seo"
+import PropTypes from "prop-types"
 
 import Layout, { Container } from '../components/layout'
 
@@ -124,32 +125,19 @@ const FormSelect = (props) => {
         
             <SelectContainer>
                 <label className="label" htmlFor={props.name} />
-                <select name={props.name} className="select">
+                <select name={props.name} className="select" value={props.selection}>
                     <option value="" disable="true" style={{ display: 'none' }}>{props.placeholder}</option>
                     <option value="Blank"></option>
                     {
                         list.map((item, i) => {
-                            if (i == props.selection) {
-                                return (
-                                    <option
-                                        key={i + (100 * Math.random())}
-                                        value={item}
-                                        selected
-                                    >
-                                        {item}
-                                    </option>
-                                )
-                            }
-                            else {
-                                return (
-                                    <option
-                                        key={i + (100 * Math.random())}
-                                        value={item}
-                                    >
-                                        {item}
-                                    </option>
-                                )
-                            }
+                            return (
+                                <option
+                                    key={i + (100 * Math.random())}
+                                    value={item}
+                                >
+                                    {item}
+                                </option>
+                            )
                         })
                     }
                 </select>
@@ -157,7 +145,7 @@ const FormSelect = (props) => {
     )
 }
 
-const Contact = (props) => {
+const Contact = ({ location }) => {
     const budget = [
         "$500-$1000",
         "$1000-$5000",
@@ -171,8 +159,6 @@ const Contact = (props) => {
         "Dynamic Website",
         "SEO, Marketing, Advertising"
     ]
-
-    const service = props.location.state.service || undefined;
     
     return (
         <Layout>
@@ -188,7 +174,6 @@ const Contact = (props) => {
                         name="service"
                         placeholder="Choose a service"
                         list={services}
-                        selection={service}
                     />
                     <FormSelect
                         name="budget"
@@ -201,6 +186,10 @@ const Contact = (props) => {
             </Container>
         </Layout>
     )
+}
+
+Contact.propTypes = {
+    location: PropTypes.node.isRequired,
 }
 
 export default Contact
