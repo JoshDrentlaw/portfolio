@@ -54,6 +54,7 @@ const Header = () => {
                 <A id="home" activeClassName="active" to="/">Home</A>
                 <A id="about" activeClassName="active" to="/about/">About</A>
                 <A id="work" activeClassName="active" to="/work/">Work</A>
+                <A id="services" activeClassName="active" to="/services/">Services</A>
                 <A id="contact" activeClassName="active" to="/contact/">Hire</A>
                 <A id="blog" activeClassName="active" to="/blog/">Blog</A>
             </Wrapper>
