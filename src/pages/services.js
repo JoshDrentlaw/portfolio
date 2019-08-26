@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import SEO from "../components/seo"
 
 import Layout, { Container } from '../components/layout'
@@ -30,6 +31,25 @@ const ServiceContainer = styled.dl`
     }
 `
 
+const Button = styled.button`
+    background-color: #00000000;
+    border: 2px solid white;
+    border-radius: 5px;
+    width: 230px; height: 70px;
+
+    &:hover {
+        background-color: white;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-decoration: none;
+        width: 100%; height: 100%;
+    }
+`
+
 const Services = () => {
 
     return (
@@ -44,13 +64,19 @@ const Services = () => {
                             <dd>I can help you repair, update, or customize any website.</dd>
                             <dd>These services can oftentimes be inexpensive, so don't sweat it if you need a quick fix.</dd>
                         </ServiceContainer>
+                        <Button>
+                            <Link
+                                to="/contact/"
+                                state={{ service: 1 }}
+                            >Inquire about Updates and Repairs</Link>
+                        </Button>
                     </li>
                     <li id="design">
                         <ServiceContainer>
                             <dt>Website Design</dt>
                             <dd>Before we can build your website, we need to talk about what it should look like, and what it's purpose will be.</dd>
                             <dd>Once we have a design in place, we can begin the build process, and bring your design to life.</dd>
-                            <dd>I include the cost of the design in the cost of the website.</dd>
+                            <dd>I include the cost of the design in the cost of the website. Please see the static and dynamic website options below.</dd>
                         </ServiceContainer>
                     </li>
                     <li id="static">

@@ -129,7 +129,14 @@ const FormSelect = (props) => {
                     <option value="Blank"></option>
                     {
                         list.map((item, i) => {
-                            return <option key={i + (100 * Math.random())} value={item}>{item}</option>
+                            return (
+                                <option
+                                    key={i + (100 * Math.random())}
+                                    value={item}
+                                >
+                                    {item}
+                                </option>
+                            )
                         })
                     }
                 </select>
@@ -137,7 +144,7 @@ const FormSelect = (props) => {
     )
 }
 
-const Contact = () => {
+const Contact = (props) => {
     const budget = [
         "$500-$1000",
         "$1000-$5000",
@@ -151,6 +158,8 @@ const Contact = () => {
         "Dynamic Website",
         "SEO, Marketing, Advertising"
     ]
+
+    const service = props.location.state.service
     
     return (
         <Layout>
@@ -166,6 +175,7 @@ const Contact = () => {
                         name="service"
                         placeholder="Choose a service"
                         list={services}
+                        selection={service}
                     />
                     <FormSelect
                         name="budget"
