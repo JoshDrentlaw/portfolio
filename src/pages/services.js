@@ -86,6 +86,12 @@ const Services = () => {
                             <dd>These days it's easy to update a static website with new content. The main downside is waiting for the website to "rebuild" itself.</dd>
                             <dd>The cost of a static website is usually low.</dd>
                         </ServiceContainer>
+                        <Button>
+                            <Link
+                                to="/contact/"
+                                state={{ service: "Static Website"}}
+                            >Inquire about a static website</Link>
+                        </Button>
                     </li>
                     <li id="dynamic">
                         <ServiceContainer>
@@ -94,6 +100,12 @@ const Services = () => {
                             <dd>Dynamic websites are perfect if you have a lot of content that could change at any time.</dd>
                             <dd>The cost can vary depending on the complexity of the website.</dd>
                         </ServiceContainer>
+                        <Button>
+                            <Link
+                                to="/contact/"
+                                state={{ service: "Dynamic Website"}}
+                            >Inquire about a dynamic website</Link>
+                        </Button>
                     </li>
                     <li id="seo">
                         <ServiceContainer>
@@ -102,6 +114,12 @@ const Services = () => {
                             <dd>I can help you identify any weak points you might have overlooked in your marketing strategy.</dd>
                             <dd>I can help you target your advertising campaigns so your money doesn't go to waste.</dd>
                         </ServiceContainer>
+                        <Button>
+                            <Link
+                                to="/contact/"
+                                state={{ service: "SEO, Marketing, Advertising"}}
+                            >Inquire about SEO, marketing, and advertising</Link>
+                        </Button>
                     </li>
                 </ServiceList>
             </Container>

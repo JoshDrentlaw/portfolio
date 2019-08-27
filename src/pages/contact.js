@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import SEO from "../components/seo"
 import PropTypes from "prop-types"
 
@@ -108,7 +108,7 @@ const SelectContainer = styled(InputContainer)`
 `
 
 const Input = (props) => (
-    <input className="input" type={props.type} name={props.name} placeholder={props.placeholder} />
+    <input className="input" type={props.type} name={props.name} placeholder={props.placeholder} onChange={props.onChange} value={props.value} />
 )
 
 const FormInput = (props) => (
@@ -125,7 +125,7 @@ const FormSelect = (props) => {
         
             <SelectContainer>
                 <label className="label" htmlFor={props.name} />
-                <select name={props.name} className="select" value={props.selection}>
+                <select name={props.name} className="select" value={props.selection || props.value} onChange={props.onChange}>
                     <option value="" disable="true" style={{ display: 'none' }}>{props.placeholder}</option>
                     <option value="Blank"></option>
                     {
@@ -146,7 +146,16 @@ const FormSelect = (props) => {
 }
 
 const Contact = ({ location }) => {
+    const [values, setValues] = useState({
+        name: '',
+        email: '',
+        service: '',
+        budget: '',
+        desc: ''
+    })
+
     const budget = [
+        "Less than $500",
         "$500-$1000",
         "$1000-$5000",
         "$5000-$10000",
@@ -159,7 +168,18 @@ const Contact = ({ location }) => {
         "Dynamic Website",
         "SEO, Marketing, Advertising"
     ]
-    
+
+    let service
+    if (location.state != undefined) {
+        service = location.state.service
+    }
+
+    const handleChange = (e) => {
+        const {name, value} = e.target
+        console.log(name, value)
+        setValues({...values, [name]: value})
+    }
+
     return (
         <Layout>
             <SEO title="Hire" description="Please drop a line if you would like to contact Josh Drentlaw about a job. He's always looking for work!" />
@@ -168,28 +188,29 @@ const Contact = ({ location }) => {
                 <Form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contact" />
                     <input type="hidden" name="bot-field" />
-                    <FormInput type="text" name="name" placeholder="Full Name" />
-                    <FormInput type="email" name="email" placeholder="Email" />
+                    <FormInput type="text" name="name" placeholder="Full Name" onChange={handleChange} value={values.name} />
+                    <FormInput type="email" name="email" placeholder="Email" onChange={handleChange} value={values.email} />
                     <FormSelect
                         name="service"
                         placeholder="Choose a service"
                         list={services}
+                        selection={service}
+                        onChange={handleChange}
+                        value={service || values.service}
                     />
                     <FormSelect
                         name="budget"
                         placeholder="Expected Budget"
                         list={budget}
+                        onChange={handleChange}
+                        value={values.budget}
                     />
-                    <textarea name="desc" className="tarea" rows="4" placeholder="Short desc of job..."></textarea>
+                    <textarea name="desc" className="tarea" rows="4" placeholder="Short desc of job..." onChange={handleChange} value={values.desc}></textarea>
                     <button className="button" type="submit">Submit</button>
                 </Form>
             </Container>
         </Layout>
     )
-}
-
-Contact.propTypes = {
-    location: PropTypes.node.isRequired,
 }
 
 export default Contact
