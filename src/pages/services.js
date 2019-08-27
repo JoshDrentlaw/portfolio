@@ -67,7 +67,7 @@ const Services = () => {
                         <Button>
                             <Link
                                 to="/contact/"
-                                state={{ service: "Updates & Repairs" }}
+                                state={{ service: "Updates & Repairs"}}
                             >Inquire about Updates and Repairs</Link>
                         </Button>
                     </li>
