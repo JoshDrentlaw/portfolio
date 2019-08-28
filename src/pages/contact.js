@@ -1,6 +1,5 @@
 import React, { useState } from 'react'
 import SEO from "../components/seo"
-import PropTypes from "prop-types"
 
 import Layout, { Container } from '../components/layout'
 
@@ -9,6 +8,15 @@ import styled from 'styled-components'
 /* const FormContainer = styled(Container)`
     height: 100vh;
 ` */
+
+const H1 = styled.h1`
+    padding: 0 0.5em;
+
+    @media(min-width: 1024px) {
+        font-size: 30px;
+        width: 50%;
+    }
+`
 
 const Form = styled.form`
     align-items: center;
@@ -108,7 +116,7 @@ const SelectContainer = styled(InputContainer)`
 `
 
 const Input = (props) => (
-    <input className="input" type={props.type} name={props.name} placeholder={props.placeholder} onChange={props.onChange} value={props.value} />
+    <input className="input" type={props.type} name={props.name} placeholder={props.placeholder} onChange={props.onChange} value={props.value} required />
 )
 
 const FormInput = (props) => (
@@ -125,7 +133,7 @@ const FormSelect = (props) => {
         
             <SelectContainer>
                 <label className="label" htmlFor={props.name} />
-                <select name={props.name} className="select" value={props.selection || props.value} onChange={props.onChange}>
+                <select name={props.name} className="select" value={props.value} onChange={props.onChange}>
                     <option value="" disable="true" style={{ display: 'none' }}>{props.placeholder}</option>
                     <option value="Blank"></option>
                     {
@@ -170,21 +178,27 @@ const Contact = ({ location }) => {
     ]
 
     let service
-    if (location.state != undefined) {
+    if (location.state !== undefined) {
         service = location.state.service
     }
 
     const handleChange = (e) => {
         const {name, value} = e.target
-        console.log(name, value)
+        validate(name, value)
         setValues({...values, [name]: value})
+    }
+
+    const validate = (name, value) => {
+        if (name === "email") {
+
+        }
     }
 
     return (
         <Layout>
             <SEO title="Hire" description="Please drop a line if you would like to contact Josh Drentlaw about a job. He's always looking for work!" />
             <Container padding="1em 0" justifyLg="space-between">
-                <h1>If you'd like to hire me...</h1>
+                <H1>Let me know which service you're interested in and a little bit about the job. I'll be in touch shortly.</H1>
                 <Form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
                     <input type="hidden" name="form-name" value="contact" />
                     <input type="hidden" name="bot-field" />
@@ -197,6 +211,7 @@ const Contact = ({ location }) => {
                         selection={service}
                         onChange={handleChange}
                         value={service || values.service}
+                        multiple={true}
                     />
                     <FormSelect
                         name="budget"
@@ -205,7 +220,7 @@ const Contact = ({ location }) => {
                         onChange={handleChange}
                         value={values.budget}
                     />
-                    <textarea name="desc" className="tarea" rows="4" placeholder="Short desc of job..." onChange={handleChange} value={values.desc}></textarea>
+                    <textarea name="desc" className="tarea" rows="4" placeholder="Short desc of job..." onChange={handleChange} value={values.desc} required></textarea>
                     <button className="button" type="submit">Submit</button>
                 </Form>
             </Container>
