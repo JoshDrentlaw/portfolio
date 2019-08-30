@@ -199,7 +199,7 @@ const Contact = ({ location }) => {
             <SEO title="Hire" description="Please drop a line if you would like to contact Josh Drentlaw about a job. He's always looking for work!" />
             <Container padding="1em 0" justifyLg="space-between">
                 <H1>Let me know which service you're interested in and a little bit about the job. I'll be in touch shortly.</H1>
-                <Form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field">
+                <Form name="contact" method="post" data-netlify="true" netlify-honeypot="bot-field" noValidate>
                     <input type="hidden" name="form-name" value="contact" />
                     <input type="hidden" name="bot-field" />
                     <FormInput type="text" name="name" placeholder="Full Name" onChange={handleChange} value={values.name} />
