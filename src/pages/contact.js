@@ -198,8 +198,10 @@ const Contact = ({ location }) => {
     ]
 
     let service
-    if (location.state !== undefined) {
-        service = location.state.service
+    if (location.hasOwnProperty('state')) {
+        if (location.state.hasOwnProperty('service')) {
+            service = location.state.service
+        }
     }
 
     const validNameRegex = RegExp(/^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/)
@@ -252,7 +254,15 @@ const Contact = ({ location }) => {
     }
 
     const handleSubmit = (e) => {
-        
+        let send = true
+        for (let name in values) {
+            if (name.valid === false) {
+                send = false
+            }
+        }
+        if (send === false) {
+            e.preventDefault()
+        }
     }
 
     return (
