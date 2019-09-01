@@ -18,7 +18,7 @@ const Heading = styled.h1`
     width: 100%;
 `
 
-const BlockText = styled.p`
+const BlockText = styled.section`
     font-size: calc(1.3em + (2 - 1.3) * (100vw - 300px) / (880 - 300));
     margin: 2em 0 4em;
     text-align: ${props => props.align || 'center'};
@@ -160,7 +160,7 @@ const Index = () => {
                     <Img fluid={data.designing.childImageSharp.fluid} alt="Design tools." />
                 </ImgContainer>
                 <BlockText align="left">
-                    Getting your business off the ground is hard. There's a million things to manage including meetings, investors, products. The list goes on and on. One thing you don't have time to become an expert in overnight is building and maintaining a website.
+                    <p>Getting your business off the ground is hard. There's a million things to manage including meetings, investors, products. The list goes on and on. One thing you don't have time to become an expert in overnight is building and maintaining a website.</p>
                     <DetailList>
                         <dt>Confidence and expertise</dt>
                         <dd>You can rest assured knowing that you're in good hands. I have the expertise that will help launch your website and business into outer space.</dd>
@@ -172,7 +172,7 @@ const Index = () => {
             </Container>
             <Container flexDirSm="column-reverse">
                 <BlockText align="left">
-                    Design is a key aspect to any website, but knowing how to tailor that design to your audience is critical. People make snap judgments that can be hard to come back from. You want to make sure you're making a stellar first impression.
+                    <p>Design is a key aspect to any website, but knowing how to tailor that design to your audience is critical. People make snap judgments that can be hard to come back from. You want to make sure you're making a stellar first impression.</p>
                     <DetailList>
                         <dt>Design and more.</dt>
                         <dd>When you hire me to build your website, your getting more than a nice design. Your getting my design expertise and experience.</dd>
@@ -192,7 +192,7 @@ const Index = () => {
                     <Img fluid={data.coding.childImageSharp.fluid} alt="Screen with code on it." />
                 </ImgContainer>
                 <BlockText align="left">
-                    Whether it's WordPress, Wix, or a custom built website, coding comes up at some point. You can trust that the technical aspects of your website are in good hands.
+                    <p>Whether it's WordPress, Wix, or a custom built website, coding comes up at some point. You can trust that the technical aspects of your website are in good hands.</p>
                     <DetailList>
                         <dt>Infinite posibilities</dt>
                         <dd>Anything that your site might need is within reach. In the end your website should function exactly as you imagine.</dd>
