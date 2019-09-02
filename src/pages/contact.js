@@ -5,10 +5,6 @@ import Layout, { Container } from '../components/layout'
 
 import styled from 'styled-components'
 
-/* const FormContainer = styled(Container)`
-    height: 100vh;
-` */
-
 const H1 = styled.h1`
     padding: 0 0.5em;
 
@@ -166,6 +162,12 @@ const FormSelect = (props) => {
     )
 }
 
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+}
+
 const Contact = ({ location }) => {
     const [values, setValues] = useState({
         fullname: {
@@ -212,10 +214,12 @@ const Contact = ({ location }) => {
         "SEO, Marketing, Advertising"
     ]
 
-    /* let service = location.state
-    if (service.hasOwnProperty('service')) {
-        service = location.state.service
-    } */
+    let service
+    if (location.hasOwnProperty('state')) {
+        if (location.state.hasOwnProperty('service')) {
+            service = location.state.service
+        }
+    }
 
     const validNameRegex = RegExp(/^[a-zA-Z]{4,}(?: [a-zA-Z]+){0,2}$/);
     const validEmailRegex = RegExp(/^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/i);
@@ -276,9 +280,27 @@ const Contact = ({ location }) => {
                 setValid(false)
             }
         }
-        console.log(valid)
+
         if (send === false) {
-            e.preventDefault()
+            return
+        }
+        else {
+            const { fullname, email, service, budget, desc } = values
+
+            fetch("/contact/", {
+                method: "POST",
+                headers: { "Content-Type": "application/x-www-form-urlencoded" },
+                body: encode({
+                    "form-name": "contact",
+                    "fullname": fullname.value,
+                    "email": email.value,
+                    "service": service.value,
+                    "budget": budget.value,
+                    "desc": desc.value
+                })
+            })
+                .then(() => console.log("Success!"))
+                .catch(error => console.log(error))
         }
     }
 
@@ -299,7 +321,7 @@ const Contact = ({ location }) => {
                         placeholder="Choose a service"
                         list={services}
                         onChange={handleChange}
-                        value={values.service.value}
+                        value={service || values.service.value}
                     />
                     {(!valid) && <span className="error">{values.service.error}</span>}
                     <FormSelect
