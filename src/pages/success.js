@@ -34,16 +34,15 @@ const Button = styled.button`
 const Services = ({ location }) => {
     let fullname, service
     if (location.hasOwnProperty('state')) {
-        if (location.state.hasOwnProperty('fullname') && location.state.hasOwnProperty('service'))
+        if (location.state.hasOwnProperty('fullname'))
         fullname = location.state.fullname
-        service = location.state.service
     }
 
     return (
         <Layout>
             <SEO title="Services" description="I offer many services to get your website off the ground right." />
             <Container flexDirLg="column">
-                <H1>{`${fullname}, ` || 'Valued customer, '}thank you for your interest in {`${service}` || 'Josh Drentlaw Web Design'}! I will be in touch with you as soon as I can. In the meantime, please check out my blog by clicking the link below. Have a great day!</H1>
+                <H1>{`${fullname}, ` || 'Valued customer, '}thank you for your interest in Josh Drentlaw Web Design! I will be in touch with you as soon as I can. In the meantime, please check out my blog by clicking the link below. Have a great day!</H1>
                 <Button type="button"><Link to="/blog/">Blog</Link></Button>
             </Container>
         </Layout>
