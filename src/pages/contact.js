@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { navigate } from 'gatsby'
 import SEO from "../components/seo"
 
 import Layout, { Container } from '../components/layout'
@@ -300,34 +301,7 @@ const Contact = ({ location }) => {
                 })
             })
                 .then(() => {
-                    setValues({
-                        fullname: {
-                            value: '',
-                            error: 'Name must contain at least 4 characters.',
-                            valid: false
-                        },
-                        email: {
-                            value: '',
-                            error: 'Please enter a valid email.',
-                            valid: false
-                        },
-                        service: {
-                            value: '',
-                            error: 'Please choose a service.',
-                            valid: false
-                        },
-                        budget: {
-                            value: '',
-                            error: 'Please choose a budget.',
-                            valid: false
-                        },
-                        desc: {
-                            value: '',
-                            error: 'Please tell me a little bit about the job.',
-                            valid: false
-                        }
-                    })
-                    alert("Thank you for your submission! I'll be in touch shortly!")
+                    navigate("/work/")
                 })
                 .catch(error => console.log(error))
         }
