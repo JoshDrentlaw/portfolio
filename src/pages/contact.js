@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { navigate } from 'gatsby'
+import TransitionLink from 'gatsby-plugin-transition-link'
+import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import SEO from "../components/seo"
 
 import Layout, { Container } from '../components/layout'
@@ -300,9 +302,7 @@ const Contact = ({ location }) => {
                     "desc": desc.value
                 })
             })
-                .then(() => {
-                    navigate("/work/")
-                })
+                .then(() => navigate("/success/"))
                 .catch(error => console.log(error))
         }
     }
