@@ -31,13 +31,13 @@ const Button = styled.button`
     }
 `
 
-const Services = () => {
+const Services = ({ location }) => {
 
     return (
         <Layout>
             <SEO title="Services" description="I offer many services to get your website off the ground right." />
             <Container flexDirLg="column">
-                <H1>Thank you for your interest! I will be in touch with you as soon as I can. In the meantime, please check out my blog by clicking the link below. Have a great day!</H1>
+                <H1>{`${location.state.fullname}, `}thank you for your interest in {`${location.state.service}`}! I will be in touch with you as soon as I can. In the meantime, please check out my blog by clicking the link below. Have a great day!</H1>
                 <Button type="button"><Link to="/blog/">Blog</Link></Button>
             </Container>
         </Layout>

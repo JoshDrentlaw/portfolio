@@ -302,7 +302,15 @@ const Contact = ({ location }) => {
                     "desc": desc.value
                 })
             })
-                .then(() => navigate("/success/"))
+                .then(() => navigate(
+                    "/success/",
+                    {
+                        state: {
+                            fullname: fullname.value,
+                            service: service.value
+                        }
+                    }
+                ))
                 .catch(error => console.log(error))
         }
     }
