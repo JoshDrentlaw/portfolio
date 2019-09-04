@@ -50,7 +50,7 @@ const Main = styled.main`
 `
 
 export const Container = styled.section`
-    align-items: center;
+    align-items: ${props => props.itemsSm || 'center'};
     display: flex;
     height: ${props => props.heightSm || 'auto'};
     flex-direction: ${props => props.flexDirSm || 'column'};
@@ -60,6 +60,7 @@ export const Container = styled.section`
     width: 100%;
 
     @media(min-width: 1024px) {
+        align-items: ${props => props.itemsLg || 'center'};
         flex-direction: ${props => props.flexDirLg || 'row'};
         height: ${props => props.heightLg || 'auto'};
     }

@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { navigate } from 'gatsby'
-import TransitionLink from 'gatsby-plugin-transition-link'
-import AniLink from 'gatsby-plugin-transition-link/AniLink'
+//import TransitionLink from 'gatsby-plugin-transition-link'
+//import AniLink from 'gatsby-plugin-transition-link/AniLink'
 import SEO from "../components/seo"
 
 import Layout, { Container } from '../components/layout'

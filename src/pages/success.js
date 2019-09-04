@@ -32,7 +32,7 @@ const Button = styled.button`
 `
 
 const Services = ({ location }) => {
-    let fullname, service
+    let fullname
     if (location.hasOwnProperty('state')) {
         if (location.state.hasOwnProperty('fullname'))
         fullname = location.state.fullname
