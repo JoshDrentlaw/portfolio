@@ -289,7 +289,7 @@ const Contact = ({ location }) => {
         }
         else {
             const { fullname, email, service, budget, desc } = values
-
+            e.preventDefault()
             fetch("/contact/", {
                 method: "POST",
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
