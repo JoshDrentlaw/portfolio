@@ -1,0 +1,134 @@
+:root {
+    --main-theme-color: hsl(219deg 77% 68%);
+    --main-theme-color-darker: hsl(219deg 77% 63%);
+    --main-theme-hover-color: hsl(219, 77%, 58%);
+}
+
+* {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+main {
+    margin-inline: 50px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    padding-block: 10px;
+    background-color: white;
+    width: calc(100vw - 16px);
+    margin-inline: -50px;
+}
+
+.nav-endcap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+}
+
+#link-container {
+    display: flex;
+    justify-content: space-between;
+    margin-block: auto;
+    width: 35vw;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    padding: 5px 20px;
+    border-radius: 5px;
+}
+
+.nav-link.active {
+    background-color: #f3f3f3;
+}
+
+#link-container .nav-link:hover {
+    background-color: #f3f3f3;
+}
+
+#link-container .nav-link.active:hover {
+    background-color: #e0e0e0;
+}
+
+#header-title {
+    font-size: xx-large;
+    font-weight: bold;
+    color: var(--main-theme-color);
+}
+
+#contact-container {
+    padding-inline: 20px;
+}
+
+#contact {
+    display: inline-block;
+    margin-block: auto;
+    color: white;
+    background-color: var(--main-theme-color);
+}
+
+#contact:hover {
+    background-color: var(--main-theme-hover-color);
+}
+
+#hero-section {
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 83px);
+}
+
+#hero-section>div {
+    width: 50%;
+}
+
+#text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    margin-bottom: 35vh;
+}
+
+#text-container>div+div {
+    margin-top: 25px;
+}
+
+#hero-name {
+    font-size: 2.5rem;
+    margin-bottom: 0;
+}
+
+#hero-job-title {
+    font-size: 3rem;
+    margin-top: 12px;
+    color: var(--main-theme-color);
+}
+
+#learn-more-btn {
+    text-decoration: none;
+    background-color: var(--main-theme-color-darker);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: x-large;
+}
+
+#learn-more-btn:hover {
+    background-color: var(--main-theme-hover-color);
+}
+
+#learn-more-arrow {
+    margin-left: 20px;
+}
+
+#img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

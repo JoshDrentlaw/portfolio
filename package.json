@@ -1,0 +1,27 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "Portfolio website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JoshDrentlaw/portfolio.git"
+  },
+  "keywords": [
+    "portfolio",
+    "vanilla",
+    "html",
+    "css",
+    "javascript",
+    "php"
+  ],
+  "author": "Josh Drentlaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JoshDrentlaw/portfolio/issues"
+  },
+  "homepage": "https://github.com/JoshDrentlaw/portfolio#readme"
+}
