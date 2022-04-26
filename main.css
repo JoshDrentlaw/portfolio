@@ -79,20 +79,18 @@ nav {
 
 #hero-section {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
     height: calc(100vh - 83px);
-}
-
-#hero-section>div {
-    width: 50%;
 }
 
 #text-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: start;
-    margin-bottom: 35vh;
+    align-items: center;
+    text-align: center;
 }
 
 #text-container>div+div {
@@ -131,4 +129,27 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+@media (min-width: 576px) {
+    #hero-section {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        align-items: initial;
+    }
+
+    #text-container {
+        margin-bottom: 35vh;
+        text-align: left;
+        align-items: start;
+    }
+
+    #img-container {
+        align-items: center;
+        margin-bottom: 35vh;
+    }
+
+    #hero-section>div {
+        width: 50%;
+    }
 }
