@@ -13,7 +13,7 @@ use Controller\Controller;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/portfolio/main.css">
+    <link rel="stylesheet" href="/<?= $_ENV['INDEX'] ?>main.css">
     <?php
     $controller = new Controller();
     $controller->includeCss();
@@ -31,13 +31,13 @@ use Controller\Controller;
                 <a class="nav-link<?= !in_array($controller->pathname, ['about', 'contact', 'projects', 'blog']) ? ' active' : '' ?>"
                     id="home" href="/portfolio">Home</a>
                 <a class="nav-link<?= $controller->pathname === 'about' ? ' active' : '' ?>" id="about"
-                    href="/portfolio/pages/about">About</a>
+                    href="/<?= $_ENV['INDEX'] ?>pages/about">About</a>
                 <a class="nav-link<?= $controller->pathname === 'projects' ? ' active' : '' ?>" id="projects"
-                    href="/portfolio/pages/projects">Projects</a>
+                    href="/<?= $_ENV['INDEX'] ?>pages/projects">Projects</a>
                 <a class="nav-link<?= $controller->pathname === 'blog' ? ' active' : '' ?>" id="blog"
-                    href="/portfolio/pages/blog">Blog</a>
+                    href="/<?= $_ENV['INDEX'] ?>pages/blog">Blog</a>
             </div>
             <div class="nav-endcap" id="contact-container">
-                <a class="nav-link" id="contact" href="/portfolio/pages/contact">Contact</a>
+                <a class="nav-link" id="contact" href="/<?= $_ENV['INDEX'] ?>pages/contact">Contact</a>
             </div>
         </nav>

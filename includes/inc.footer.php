@@ -1,5 +1,5 @@
 </main>
-<script src="/portfolio/index.js"></script>
+<script src="/<?= $_ENV['INDEX'] ?>index.js"></script>
 <?= $controller->includeJs(); ?>
 </body>
 
