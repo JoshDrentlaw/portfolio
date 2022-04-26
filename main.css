@@ -10,6 +10,7 @@
 
 main {
     margin-inline: 50px;
+    width: calc(100% - 100px);
 }
 
 nav {
@@ -27,14 +28,20 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 20vw;
 }
 
 #link-container {
+    background-color: white;
     display: flex;
-    justify-content: space-between;
-    margin-block: auto;
-    width: 35vw;
+    flex-direction: column;
+    position: fixed;
+    bottom: 8px;
+    width: calc(100% - 16px);
+    box-shadow: 0px 3px 13px 2px #a3b4bd;
+}
+
+#link-container>.nav-link {
+    font-size: x-large;
 }
 
 .nav-link {
@@ -57,7 +64,7 @@ nav {
 }
 
 #header-title {
-    font-size: xx-large;
+    font-size: x-large;
     font-weight: bold;
     color: var(--main-theme-color);
 }
@@ -83,6 +90,7 @@ nav {
     justify-content: start;
     align-items: center;
     height: calc(100vh - 83px);
+    width: 100%;
 }
 
 #text-container {
@@ -103,7 +111,7 @@ nav {
 }
 
 #hero-job-title {
-    font-size: 3rem;
+    font-size: 2rem;
     margin-top: 12px;
     color: var(--main-theme-color);
 }
@@ -132,6 +140,27 @@ nav {
 }
 
 @media (min-width: 576px) {
+    .nav-endcap {
+        width: 20vw;
+    }
+
+    #header-title {
+        font-size: xx-large;
+    }
+
+    #link-container {
+        position: relative;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-block: auto;
+        width: 35vw;
+        box-shadow: none;
+    }
+
+    #link-container>.nav-link {
+        font-size: initial;
+    }
+
     #hero-section {
         flex-direction: row-reverse;
         justify-content: space-between;
@@ -144,9 +173,13 @@ nav {
         align-items: start;
     }
 
+    #hero-job-title {
+        font-size: 2rem;
+    }
+
     #img-container {
         align-items: center;
-        margin-bottom: 35vh;
+        margin-bottom: 20vh;
     }
 
     #hero-section>div {
