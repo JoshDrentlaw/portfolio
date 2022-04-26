@@ -25,11 +25,11 @@ use Controller\Controller;
     <main>
         <nav>
             <div class="nav-endcap" id="head-title-container">
-                <a class="nav-link nav-endcap" id="header-title" href="/portfolio">Josh Drentlaw</a>
+                <a class="nav-link nav-endcap" id="header-title" href="/<?= $_ENV['INDEX'] ?>">Josh Drentlaw</a>
             </div>
             <div id="link-container">
                 <a class="nav-link<?= !in_array($controller->pathname, ['about', 'contact', 'projects', 'blog']) ? ' active' : '' ?>"
-                    id="home" href="/portfolio">Home</a>
+                    id="home" href="/<?= $_ENV['INDEX'] ?>">Home</a>
                 <a class="nav-link<?= $controller->pathname === 'about' ? ' active' : '' ?>" id="about"
                     href="/<?= $_ENV['INDEX'] ?>pages/about">About</a>
                 <a class="nav-link<?= $controller->pathname === 'projects' ? ' active' : '' ?>" id="projects"
