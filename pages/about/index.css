@@ -1,3 +1,19 @@
 h1 {
     text-align: center;
 }
+
+h1>span {
+    color: var(--main-theme-color);
+    font-weight: bold;
+}
+
+p {
+    margin-top: 3em;
+    font-size: 20px;
+}
+
+@media (min-width: 576px) {
+    p {
+        text-align: center;
+    }
+}
