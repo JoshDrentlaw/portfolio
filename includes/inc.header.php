@@ -37,7 +37,7 @@ use Controller\Controller;
                 <a class="nav-link<?= $controller->pathname === 'blog' ? ' active' : '' ?>" id="blog"
                     href="/<?= $_ENV['INDEX'] ?>pages/blog">Blog</a>
             </div>
-            <div class="nav-endcap" id="contact-container">
-                <a class="nav-link" id="contact" href="/<?= $_ENV['INDEX'] ?>pages/contact">Contact</a>
+            <div class="nav-endcap" id="nav-contact-container">
+                <a class="nav-link" id="nav-contact" href="/<?= $_ENV['INDEX'] ?>pages/contact">Contact</a>
             </div>
         </nav>
