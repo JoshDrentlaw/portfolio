@@ -3,7 +3,6 @@
     flex-direction: column;
     justify-content: start;
     width: 100%;
-    height: calc(100vh - 83px);
 }
 
 #contact-container>div {
@@ -33,6 +32,7 @@
     flex-direction: column;
     justify-content: start;
     align-items: center;
+    margin-bottom: 2em;
     width: 100%;
 }
 
@@ -95,6 +95,9 @@ textarea.form-control {
 
     #contact-form-container {
         justify-content: center;
+        margin-bottom: 0;
         width: 50%;
     }
+
+    #contact-form {}
 }
