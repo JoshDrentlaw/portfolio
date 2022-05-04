@@ -7,7 +7,9 @@ class Controller {
 
     function __construct()
     {
-        $this->pathname = end(explode('/', trim($_SERVER['REQUEST_URI'], '\/')));
+        $uri = trim($_SERVER['REQUEST_URI'], '\/');
+        $uri = explode('/', $uri);
+        $this->pathname = end($uri);
     }
 
     public function includeCss()

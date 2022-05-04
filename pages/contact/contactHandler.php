@@ -4,6 +4,8 @@
 
 extract($_POST);
 
+$ln = "\r\n";
+
 $msg = "
     <p>Name: {$contact_name}</p>
     <p>Email: {$contact_email}</p>
@@ -11,7 +13,11 @@ $msg = "
     <p>Message: {$contact_message}</p>
 ";
 
-// mail("joshdrentlaw@gmail.com", "Potential Client: {$contact_name}", wordwrap($msg, 70));
+$headers = "MIME-Version: 1.0" . $ln
+    . "Content-type:text/html;charset=UTF-8" . $ln
+    . "From: info@joshdrentlaw.com" . $ln;
+
+$res = mail("joshdrentlaw@gmail.com", "Potential Client: {$contact_name}", wordwrap($msg, 70, $ln), $headers);
 
 ?>
 
