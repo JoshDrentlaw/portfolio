@@ -15,7 +15,8 @@ $msg = "
 
 $headers = "MIME-Version: 1.0" . $ln
     . "Content-type:text/html;charset=UTF-8" . $ln
-    . "From: info@joshdrentlaw.com" . $ln;
+    . "From: info@joshdrentlaw.com" . $ln
+    . "X-Mailer: PHP/" . phpversion();
 
 $res = mail("joshdrentlaw@gmail.com", "Potential Client: {$contact_name}", wordwrap($msg, 70, $ln), $headers);
 
