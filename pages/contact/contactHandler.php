@@ -20,7 +20,7 @@ $headers = "MIME-Version: 1.0" . $ln
     . "X-Mailer: PHP/" . phpversion();
     // . "X-Priority: 1" . $ln This will make it !urgent
 
-$res = mail("joshdrentlaw@gmail.com", "Potential Client: {$contact_name}", wordwrap($msg, 70, $ln), $headers, '-f info@joshdrentlaw.com');
+$res = mail("joshdrentlaw@gmail.com", "Potential Client: {$contact_name}", wordwrap($msg, 70, $ln), $headers, '-r info@joshdrentlaw.com');
 
 ?>
 
