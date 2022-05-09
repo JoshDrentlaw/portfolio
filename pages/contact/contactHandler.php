@@ -15,12 +15,12 @@ $msg = "
 
 $headers = "MIME-Version: 1.0" . $ln
     . "Content-type:text/html;charset=iso-8895-1" . $ln
-    . "From: Josh Drentlaw <info@joshdrentlaw.com>" . $ln
-    . "X-Sender: Josh Drentlaw <info@joshdrentlaw.com>" . $ln
+    . "From: Josh Drentlaw <info@mail.joshdrentlaw.com>" . $ln
+    . "X-Sender: Josh Drentlaw <info@mail.joshdrentlaw.com>" . $ln
     . "X-Mailer: PHP/" . phpversion();
     // . "X-Priority: 1" . $ln This will make it !urgent
 
-$res = mail("joshdrentlaw@gmail.com", "Potential Client: {$contact_name}", wordwrap($msg, 70, $ln), $headers, '-finfo@joshdrentlaw.com');
+$res = imap_mail("joshdrentlaw@gmail.com", "info@joshdrentlaw.com", "Potential Client: {$contact_name}",);
 
 ?>
 
