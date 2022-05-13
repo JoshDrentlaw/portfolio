@@ -2,6 +2,11 @@
 
 <?php
 
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
+require __DIR__ . '/../../vendor/autoload.php';
+
 extract($_POST);
 
 $ln = "\r\n";
@@ -20,7 +25,29 @@ $headers = "MIME-Version: 1.0" . $ln
     . "X-Mailer: PHP/" . phpversion();
     // . "X-Priority: 1" . $ln This will make it !urgent
 
-$res = imap_mail("joshdrentlaw@gmail.com", "info@joshdrentlaw.com", "Potential Client: {$contact_name}",);
+$mail = new PHPMailer(true);
+try {
+    if ($_ENV['ENVIRONMENT'] === 'production') {
+        $mail->SMTPDebug = SMTP::DEBUG_SERVER;
+        $mail->isSMTP();
+        $mail->Host = 'mail.joshdrentlaw.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'info@joshdrentlaw.com';
+        $mail->Password = $_ENV['SMTP_PASSWORD'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port = 465;
+    }
+
+    $mail->setFrom('jdrentlaw@joshdrentlaw.com', 'Josh Drentlaw');
+    $mail->addAddress("joshdrentlaw@gmail.com");
+    $mail->isHTML(true);
+    $mail->Subject = "Potential Client: {$contact_name}";
+    $mail->Body = $msg;
+
+    $mail->send();
+} catch (Exception $e) {
+    echo "Message could not be sent. Mail Error: {$mail->ErrorInfo}";
+}
 
 ?>
 
