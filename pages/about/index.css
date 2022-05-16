@@ -17,14 +17,42 @@ h1>span {
 p {
     font-size: 1.25rem;
     text-align: center;
+    line-height: 1.5;
 }
 
 p+p {
     margin-top: 2em;
 }
 
-figure {
-    margin: 5px;
+#about-img-container {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-areas:
+        'pancakes cashier'
+        'pancakes goat';
+    /* grid-template-columns: 2fr 1fr;
+    grid-template-rows: 50% 50%; */
+}
+
+.stacked-img {
+    display: none;
+    image-resolution: 4x3;
+}
+
+#pancakes {
+    grid-area: pancakes;
+}
+
+#cashier {
+    grid-area: cashier;
+}
+
+#goat {
+    grid-area: goat;
+}
+
+#about-img-container>img {
+    border-radius: 5px;
 }
 
 @media (min-width: 576px) {
@@ -47,5 +75,9 @@ figure {
 
     #about-img-container {
         margin-left: 3em;
+    }
+
+    .stacked-img {
+        display: block;
     }
 }
