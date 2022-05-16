@@ -1,5 +1,6 @@
 h1 {
     text-align: center;
+    margin-bottom: 2em;
 }
 
 h1>span {
@@ -7,13 +8,44 @@ h1>span {
     font-weight: bold;
 }
 
+#about-container {
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+}
+
 p {
-    margin-top: 3em;
-    font-size: 20px;
+    font-size: 1.25rem;
+    text-align: center;
+}
+
+p+p {
+    margin-top: 2em;
+}
+
+figure {
+    margin: 5px;
 }
 
 @media (min-width: 576px) {
+    h1 {
+        margin-bottom: 3em;
+    }
+
+    #about-container {
+        flex-direction: row;
+    }
+
+    #about-container>div {
+        width: 50%;
+    }
+
     p {
-        text-align: center;
+        text-align: left;
+        font-size: 1.5rem;
+    }
+
+    #about-img-container {
+        margin-left: 3em;
     }
 }
