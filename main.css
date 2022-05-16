@@ -26,8 +26,13 @@
     background-color: var(--main-theme-hover-color);
 }
 
+.btn-compact {
+    padding: 2px 10px;
+}
+
 main {
     margin-inline: 50px;
+    margin-bottom: 45px;
     width: calc(100% - 100px);
 }
 
@@ -57,8 +62,9 @@ nav {
     display: flex;
     justify-content: space-evenly;
     position: fixed;
-    bottom: 8px;
-    width: calc(100% - 16px);
+    bottom: 0;
+    padding-block: 6px;
+    width: 100%;
 }
 
 #link-container>.nav-link {
@@ -160,6 +166,10 @@ nav {
 }
 
 @media (min-width: 576px) {
+    main {
+        margin-bottom: 0;
+    }
+
     main>section {
         min-height: calc(100vh - 83px);
     }
