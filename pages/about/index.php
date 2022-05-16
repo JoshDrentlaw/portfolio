@@ -4,7 +4,8 @@
 
 <div id="about-container">
     <div id="about-text-container">
-        <p>Your mission to grow your business and connect with your customers, not spend weeks figuring out how to get a
+        <p>Your mission is to grow your business and connect with your customers, not spend weeks figuring out how to
+            get a
             website
             up.</p>
 
@@ -16,10 +17,12 @@
         </p>
     </div>
     <div id="about-img-container">
-        <figure>
-            <img src="/<?= $_ENV['INDEX'] ?>public/images/cashier.jpg" alt="Cashier" loading="lazy" width="100%">
-            <figcaption>Photo by Christiann Koepke on Unsplash</figcaption>
-        </figure>
+        <img src="/<?= $_ENV['INDEX'] ?>public/images/pancakes.jpg" alt="Photo by Chad Montano on Unsplash"
+            loading="lazy" width="100%" id="pancakes">
+        <img src="/<?= $_ENV['INDEX'] ?>public/images/cashier.jpg" alt="Photo by Christiann Koepke on Unsplash"
+            loading="lazy" width="100%" class="stacked-img" id="cashier">
+        <img src="/<?= $_ENV['INDEX'] ?>public/images/goat.jpg" alt="Photo by Jorge Salvador on Unsplash" loading="lazy"
+            width="100%" class="stacked-img" id="goat">
     </div>
 </div>
 
