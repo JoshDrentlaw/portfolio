@@ -27,15 +27,15 @@ $headers = "MIME-Version: 1.0" . $ln
 
 $mail = new PHPMailer(true);
 try {
-    if ($_ENV['ENVIRONMENT'] === 'production') {
+    if (/* $_ENV['ENVIRONMENT'] === 'production' */true) {
         $mail->SMTPDebug = SMTP::DEBUG_SERVER;
         $mail->isSMTP();
-        $mail->Host = 'mail.joshdrentlaw.com';
+        $mail->Host = 'smtp.gmail.com';
         $mail->SMTPAuth = true;
-        $mail->Username = 'info@joshdrentlaw.com';
-        $mail->Password = $_ENV['SMTP_PASSWORD'];
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
-        $mail->Port = 465;
+        $mail->Username = 'joshdrentlaw@gmail.com';
+        $mail->Password = $_ENV['SMTP_APPLICATION_PASSWORD'];
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
+        $mail->Port = 587;
     }
 
     $mail->setFrom('jdrentlaw@joshdrentlaw.com', 'Josh Drentlaw');
