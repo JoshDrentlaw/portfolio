@@ -9,7 +9,10 @@ require __DIR__ . '/../../vendor/autoload.php';
 
 extract($_POST);
 
-$ln = "\r\n";
+// if any bots ignore js, this honeypot will catch the bot
+if ($honeypot) {
+    return false;
+}
 
 $msg = "
     <p>Name: {$contact_name}</p>
@@ -18,16 +21,9 @@ $msg = "
     <p>Message: {$contact_message}</p>
 ";
 
-$headers = "MIME-Version: 1.0" . $ln
-    . "Content-type:text/html;charset=iso-8895-1" . $ln
-    . "From: Josh Drentlaw <info@mail.joshdrentlaw.com>" . $ln
-    . "X-Sender: Josh Drentlaw <info@mail.joshdrentlaw.com>" . $ln
-    . "X-Mailer: PHP/" . phpversion();
-    // . "X-Priority: 1" . $ln This will make it !urgent
-
 $mail = new PHPMailer(true);
 try {
-    $mail->SMTPDebug = $_ENV['ENVIRONMENT'] === 'production' ? 0 : SMTP::DEBUG_SERVER;
+    // $mail->SMTPDebug = $_ENV['ENVIRONMENT'] === 'production' ? 0 : SMTP::DEBUG_SERVER;
     $mail->isSMTP();
     $mail->Host = 'smtp.gmail.com';
     $mail->SMTPAuth = true;

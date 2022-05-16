@@ -8,6 +8,7 @@
     </div>
     <div id="contact-form-container">
         <form id="contact-form" action="contactHandler.php" method="POST">
+            <div style="display:none;"><input type="checkbox" id="honeypot" name="honeypot"></div>
             <div class="form-group">
                 <label for="contact_name">Full Name</label>
                 <input type="text" name="contact_name" class="form-control" placeholder="Enter your full name">
