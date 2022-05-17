@@ -2,7 +2,7 @@
 
 <section id="hero-section">
     <div id="img-container">
-        <img id="hero-img" src="/<?= $_ENV['INDEX'] ?>public/images/profile_photo_with_backdrop.png" alt="Josh Drentlaw"
+        <img id="hero-img" src="/public/images/profile_photo_with_backdrop.png" alt="Josh Drentlaw"
             loading="lazy" width="100%">
     </div>
     <div id="text-container">
@@ -11,7 +11,7 @@
             <h1 id="hero-job-title">Full Stack Web Developer</h1>
         </div>
         <div>
-            <a id="learn-more-btn" href="/<?= $_ENV['INDEX'] ?>pages/about">Learn More <span
+            <a id="learn-more-btn" href="/pages/about">Learn More <span
                     id="learn-more-arrow">&#10132;</span></a>
         </div>
     </div>

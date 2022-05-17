@@ -15,14 +15,14 @@ class Controller {
     public function includeCss()
     {
         if (is_file(__DIR__ . '/../../pages/' . $this->pathname . '/index.css')) {
-            echo '<link rel="stylesheet" href="/' . $_ENV['INDEX'] . 'pages/' . $this->pathname . '/index.css">';
+            echo '<link rel="stylesheet" href="/pages/' . $this->pathname . '/index.css">';
         }
     }
 
     public function includeJs()
     {
         if (is_file(__DIR__ . '/../../pages/' . $this->pathname . '/index.js')) {
-            echo '<script src="/' . $_ENV['INDEX'] . 'pages/' . $this->pathname . '/index.js" type="module"></script>';
+            echo '<script src="/pages/' . $this->pathname . '/index.js" type="module"></script>';
         }
     }
 }

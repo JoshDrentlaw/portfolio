@@ -12,16 +12,16 @@
         <p>My mission is to deliver an amazing website, so you can spend time on what matters most to you.</p>
 
         <p>Please check out my services below and do not hesitate to
-            <a href="/<?= $_ENV['INDEX'] ?>pages/contact/" class="btn btn-primary btn-compact">contact me</a> for a
+            <a href="/pages/contact/" class="btn btn-primary btn-compact">contact me</a> for a
             quote.
         </p>
     </div>
     <div id="about-img-container">
-        <img src="/<?= $_ENV['INDEX'] ?>public/images/pancakes.jpg" alt="Photo by Chad Montano on Unsplash"
+        <img src="/public/images/pancakes.jpg" alt="Photo by Chad Montano on Unsplash"
             loading="lazy" width="100%" id="pancakes">
-        <img src="/<?= $_ENV['INDEX'] ?>public/images/cashier.jpg" alt="Photo by Christiann Koepke on Unsplash"
+        <img src="/public/images/cashier.jpg" alt="Photo by Christiann Koepke on Unsplash"
             loading="lazy" width="100%" class="stacked-img" id="cashier">
-        <img src="/<?= $_ENV['INDEX'] ?>public/images/goat.jpg" alt="Photo by Jorge Salvador on Unsplash" loading="lazy"
+        <img src="/public/images/goat.jpg" alt="Photo by Jorge Salvador on Unsplash" loading="lazy"
             width="100%" class="stacked-img" id="goat">
     </div>
 </div>
