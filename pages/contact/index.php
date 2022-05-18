@@ -20,7 +20,8 @@
             <div class="form-group">
                 <label for="contact_phone_number">Phone Number</label>
                 <input type="phone" name="contact_phone_number" class="form-control"
-                    placeholder="Enter your phone number">
+                    placeholder="Enter your phone number"
+                    pattern="^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$">
             </div>
             <div class="form-group">
                 <label for="contact_message">Message</label>

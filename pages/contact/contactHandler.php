@@ -9,6 +9,8 @@ require __DIR__ . '/../../vendor/autoload.php';
 
 extract($_POST);
 
+$contact_message = strip_tags($contact_message);
+
 // if any bots ignore js, this honeypot will catch the bot
 if ($honeypot) {
     return false;
@@ -38,7 +40,11 @@ try {
     $mail->Subject = "Potential Client: {$contact_name}";
     $mail->Body = $msg;
 
-    $mail->send();
+    if ($_ENV['ENVIRONMENT'] === 'production') {
+        $mail->send();
+    } else {
+        echo $msg;
+    }
 } catch (Exception $e) {
     echo "Message could not be sent. Mail Error: {$mail->ErrorInfo}";
 }
