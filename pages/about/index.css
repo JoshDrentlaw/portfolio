@@ -1,5 +1,6 @@
 h1 {
     text-align: center;
+    margin-top: 2em;
     margin-bottom: 2em;
 }
 
@@ -10,7 +11,7 @@ h1>span {
 
 #about-container {
     display: flex;
-    flex-direction: column-reverse;
+    flex-direction: column;
     justify-content: space-between;
 }
 
@@ -24,44 +25,9 @@ p+p {
     margin-top: 2em;
 }
 
-#about-img-container {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-areas:
-        'pancakes cashier'
-        'pancakes goat';
-    /* grid-template-columns: 2fr 1fr;
-    grid-template-rows: 50% 50%; */
-}
-
-.stacked-img {
-    display: none;
-    image-resolution: 4x3;
-}
-
-#pancakes {
-    grid-area: pancakes;
-}
-
-#cashier {
-    grid-area: cashier;
-}
-
-#goat {
-    grid-area: goat;
-}
-
-#about-img-container>img {
-    border-radius: 5px;
-}
-
 @media (min-width: 576px) {
     h1 {
         margin-bottom: 3em;
-    }
-
-    #about-container {
-        flex-direction: row;
     }
 
     #about-container>div {
@@ -69,15 +35,6 @@ p+p {
     }
 
     p {
-        text-align: left;
         font-size: 1.5rem;
-    }
-
-    #about-img-container {
-        margin-left: 3em;
-    }
-
-    .stacked-img {
-        display: block;
     }
 }
