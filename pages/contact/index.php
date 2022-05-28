@@ -1,4 +1,4 @@
-<?php include '../../includes/inc.header.php';?>
+<?php include '../../includes/inc.header.php'; ?>
 
 <section id="contact-container">
     <div id="message-container">
@@ -11,7 +11,8 @@
             <div style="display:none;"><input type="checkbox" id="honeypot" name="honeypot"></div>
             <div class="form-group">
                 <label for="contact_name">Full Name</label>
-                <input type="text" name="contact_name" class="form-control" placeholder="Enter your full name">
+                <input type="text" name="contact_name" class="form-control"
+                    placeholder="Enter your first and last name">
             </div>
             <div class="form-group">
                 <label for="contact_email">Email</label>
@@ -33,4 +34,4 @@
     </div>
 </section>
 
-<?php include '../../includes/inc.footer.php';?>
+<?php include '../../includes/inc.footer.php'; ?>
