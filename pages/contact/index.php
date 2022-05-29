@@ -16,7 +16,7 @@
             <div class="card">
                 <h2 class="card-title">Experience</h2>
                 <div class="card-body">
-                    <p>With 5 years of experience in web development on my side I will help you and your
+                    <p>With 10 years of experience in web development on my side I will help you and your
                         business reach your full online potential.</p>
                     <p>When things go wrong, you will know that you are safe hands.</p>
                 </div>
