@@ -2,17 +2,21 @@
 <html lang="en">
 
 <?php
-require __DIR__ . '/../vendor/autoload.php';
-$dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/' . '../');
+require __DIR__.'/../vendor/autoload.php';
+$dotenv = Dotenv\Dotenv::createImmutable(__DIR__.'/'.'../');
 $dotenv->load();
 
 use Controller\Controller;
+
 ?>
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/public/packages/@fortawesome/fontawesome-free/css/fontawesome.css" rel="stylesheet">
+    <link href="/public/packages/@fortawesome/fontawesome-free/css/brands.css" rel="stylesheet">
+    <link href="/public/packages/@fortawesome/fontawesome-free/css/solid.css" rel="stylesheet">
     <link rel="stylesheet" href="/main.css">
     <?php
     $controller = new Controller();
@@ -28,13 +32,13 @@ use Controller\Controller;
                 <a class="nav-link nav-endcap" id="header-title" href="/">Josh Drentlaw</a>
             </div>
             <div id="link-container">
-                <a class="nav-link<?= !in_array($controller->pathname, ['about', 'contact', 'projects', 'blog']) ? ' active' : '' ?>"
+                <a class="nav-link<?= !in_array($controller->pathname, ['about', 'contact', 'projects', 'blog']) ? ' active' : ''; ?>"
                     id="home" href="/">Home</a>
-                <a class="nav-link<?= $controller->pathname === 'about' ? ' active' : '' ?>" id="about"
+                <a class="nav-link<?= $controller->pathname === 'about' ? ' active' : ''; ?>" id="about"
                     href="/pages/about">About</a>
-                <a class="nav-link<?= $controller->pathname === 'projects' ? ' active' : '' ?>" id="projects"
+                <a class="nav-link<?= $controller->pathname === 'projects' ? ' active' : ''; ?>" id="projects"
                     href="/pages/projects">Projects</a>
-                <a class="nav-link<?= $controller->pathname === 'blog' ? ' active' : '' ?>" id="blog"
+                <a class="nav-link<?= $controller->pathname === 'blog' ? ' active' : ''; ?>" id="blog"
                     href="/pages/blog">Blog</a>
             </div>
             <div class="nav-endcap" id="nav-contact-container">
