@@ -17,14 +17,43 @@
     width: 100%;
 }
 
-#message-container>p {
+#message-container>h1 {
     font-size: 2rem;
     text-align: center;
 }
 
-#message-container>p>span {
+#message-container>h1>span {
     color: var(--main-theme-color);
     font-weight: bold;
+}
+
+#card-deck {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 2em;
+}
+
+.card {
+    width: 100%;
+    border: 1px solid #eee;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px 0 #ddd;
+}
+
+.card+.card {
+    margin-top: 1em;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.card-body {
+    margin-block: 1em;
+    padding: 1.5em;
 }
 
 #contact-form-container {
@@ -88,9 +117,22 @@ textarea.form-control {
         justify-content: center;
     }
 
-    #message-container>p {
+    #message-container>h1 {
         font-size: 4rem;
         text-align: left;
+    }
+
+    #card-deck {
+        flex-direction: row;
+        align-items: stretch;
+    }
+
+    .card {
+        width: 25%;
+    }
+
+    .card+.card {
+        margin-top: 0;
     }
 
     #contact-form-container {
