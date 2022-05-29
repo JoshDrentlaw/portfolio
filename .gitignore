@@ -58,7 +58,6 @@ typings/
 # gatsby files
 .cache/
 #public
-/public/packages/
 
 # Mac files
 .DS_Store
@@ -70,4 +69,5 @@ yarn-error.log
 # Yarn Integrity file
 .yarn-integrity
 
-/vendor/
+/vendor
+/packages
