@@ -2,9 +2,34 @@
 
 <section id="contact-container">
     <div id="message-container">
-        <p>There's never a better <span>time</span><br>than <span>today</span> to get<br><span>started</span> on your
+        <h1>There's never a better <span>time</span><br>than <span>today</span> to get<br><span>started</span> on your
             <span>dreams</span>.
-        </p>
+        </h1>
+        <div id="card-deck">
+            <div class="card">
+                <h2 class="card-title">Trust & Confidence</h2>
+                <div class="card-body">
+                    <p>My goal is to be open and upfront about every step of my process.</p>
+                    <p>Communication will always encouraged and you'll never feel left in the dark.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Experience</h2>
+                <div class="card-body">
+                    <p>With 5 years of experience in web development on my side I will help you and your
+                        business reach your full online potential.</p>
+                    <p>When things go wrong, you will know that you are safe hands.</p>
+                </div>
+            </div>
+            <div class="card">
+                <h2 class="card-title">Quality</h2>
+                <div class="card-body">
+                    <p>Every design should feel unique and feel like it's yours.</p>
+                    <p>I wont stop until you are fully sasified with your website.</p>
+                    <p>Feel confident that your website will look great everywhere.</p>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="contact-form-container">
         <form id="contact-form" action="contactHandler.php" method="POST">
