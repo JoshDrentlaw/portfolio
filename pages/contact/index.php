@@ -8,6 +8,10 @@
         <div id="card-deck">
             <div class="card">
                 <h2 class="card-title">Trust & Confidence</h2>
+                <div class="icon-container">
+                    <i class="fa-solid fa-2x fa-handshake"></i>
+                    <i class="fa-solid fa-2x fa-shield-heart"></i>
+                </div>
                 <div class="card-body">
                     <p>My goal is to be open and upfront about every step of my process.</p>
                     <p>Communication will always encouraged and you'll never feel left in the dark.</p>
@@ -15,14 +19,25 @@
             </div>
             <div class="card">
                 <h2 class="card-title">Experience</h2>
+                <div class="icon-container">
+                    <i class="fa-solid fa-2x fa-laptop-code"></i>
+                    <i class="fa-solid fa-2x fa-bug-slash"></i>
+                </div>
                 <div class="card-body">
                     <p>With 10 years of experience in web development on my side I will help you and your
                         business reach your full online potential.</p>
-                    <p>When things go wrong, you will know that you are safe hands.</p>
+                    <p>When things go wrong, you will know that you are in safe hands.</p>
                 </div>
             </div>
             <div class="card">
                 <h2 class="card-title">Quality</h2>
+                <div class="icon-container" style="font-size:22px;">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                </div>
                 <div class="card-body">
                     <p>Every design should feel unique and feel like it's yours.</p>
                     <p>I wont stop until you are fully sasified with your website.</p>
