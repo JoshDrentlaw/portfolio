@@ -23,7 +23,7 @@ document.getElementById('contact-form').addEventListener('submit', function (e) 
     if ($name.value === '') {
         e.preventDefault()
         $name.setCustomValidity('Please enter your full name.')
-    } else if ($name.value.split(' ').length <= 1) {
+    } else if ($name.value.split(' ').filter(n => !!n).length <= 1) {
         e.preventDefault()
         $name.setCustomValidity('Please enter a first and last name.')
     } else {
