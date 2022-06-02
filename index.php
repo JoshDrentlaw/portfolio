@@ -16,7 +16,5 @@
         </div>
     </div>
 </section>
-<section id="services-section"></section>
-<section id="contact-section"></section>
 
 <?php include 'includes/inc.footer.php';?>
