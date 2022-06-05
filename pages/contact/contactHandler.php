@@ -7,12 +7,41 @@ use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 require __DIR__ . '/../../vendor/autoload.php';
 
+if (empty($_POST)) {
+    echo 'Must be post';
+    return false;
+}
+
 extract($_POST);
 
+$contact_name = strip_tags($contact_name);
+$testName = array_filter(explode(' ', $contact_name));
+if (count($testName) < 2) {
+    echo 'Name is invalid';
+    return false;
+}
+
+$contact_email = filter_var($contact_email, FILTER_SANITIZE_EMAIL);
+if (!filter_var($contact_email, FILTER_VALIDATE_EMAIL)) {
+    echo 'Email is invalid';
+    return false;
+}
+
+$contact_phone_number = filter_var($contact_phone_number, FILTER_SANITIZE_NUMBER_INT);
+if (!preg_match("/^\+?\d?-?\d{3}-?\d{3}-?\d{4}$/", $contact_phone_number)) {
+    echo 'Phone number is invalid';
+    return false;
+}
+
 $contact_message = strip_tags($contact_message);
+if (empty($contact_message)) {
+    echo 'Message is empty';
+    return false;
+}
 
 // if any bots ignore js, this honeypot will catch the bot
 if ($honeypot) {
+    echo 'Fuck you bot';
     return false;
 }
 
